@@ -1,0 +1,9 @@
+20/11/10 11:42:44 INFO  James: JAMES init...
+20/11/10 11:42:44 INFO  James: Local host is: UltimaWeapon
+20/11/10 11:42:44 INFO  James: Handling mail for: ultimaweapon
+20/11/10 11:42:44 INFO  James: Handling mail for: 0:0:0:0:0:0:0:1
+20/11/10 11:42:44 INFO  James: Handling mail for: 127.0.0.1
+20/11/10 11:42:44 INFO  James: Handling mail for: localhost
+20/11/10 11:42:44 INFO  James: Local users repository opened
+20/11/10 11:42:44 INFO  James: Private Repository LocalInbox opened
+20/11/10 11:42:44 INFO  James: JAMES ...init end

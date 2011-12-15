@@ -1,0 +1,8 @@
+04/11/10 12:03:17 INFO  James.Mailet: RemoteAddrNotInNetwork: Authorized addresses: [127.0.0.1/255.255.255.255]
+04/11/10 12:03:17 INFO  James.Mailet: RemoteDelivery: maxRetries is larger than total number of attempts specified. Increasing last delayTime with 19 attempts 
+04/11/10 12:03:17 INFO  James.Mailet: RemoteDelivery: Delay of 21600000 msecs is now attempted: 20 times
+04/11/10 12:10:08 INFO  James.Mailet: ToRepository: Storing mail Mail1288887008290-0 in file://var/mail/address-error/
+04/11/10 12:10:42 INFO  James.Mailet: ToRepository: Storing mail Mail1288887042450-1 in file://var/mail/address-error/
+04/11/10 12:12:01 INFO  James.Mailet: ToRepository: Storing mail Mail1288887121046-2 in file://var/mail/address-error/
+04/11/10 12:12:31 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1288887151685-3-to-gmail.com to host gmail-smtp-in.l.google.com. at 74.125.113.27 for addresses [caw4567@gmail.com]
+04/11/10 12:12:34 INFO  James.Mailet: RemoteDelivery: Mail (Mail1288887151685-3-to-gmail.com) sent successfully to gmail-smtp-in.l.google.com. at 74.125.113.27 for [caw4567@gmail.com]

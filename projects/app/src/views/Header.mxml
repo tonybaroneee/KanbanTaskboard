@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="100%" height="31">
+
+	<fx:Script>
+		<![CDATA[
+			import events.UserEvent;
+			import mx.events.MenuEvent;
+			import events.TaskEvent;
+			import events.ProjectEvent;
+			import mx.controls.Alert;
+			
+//			[Bindable] 
+//			public var menuData:Array = [
+//				{label: "File", children: [
+//					{label: "New Project"},
+//					{label: "Open..."},
+//					{label: "Save..."},
+//					{type: "separator"},
+//					{label: "Import/Export"},
+//					{type: "separator"},
+//					{label: "Properties"}
+//				]},
+//				{label: "Project", children: [
+//					{label: "Add User..."},
+//					{type: "separator"},
+//					{label: "Revert Version..."},
+//					{label: "History Report"},
+//					{label: "Project Backlog"},
+//					{type: "separator"},
+//					{label: "Notification Settings"}
+//				]},
+//				{label: "Task", children: [
+//					{label: "Create Task"},
+//					{label: "Edit Task..."},
+//					{type: "separator"},
+//					{label: "Subscribe to Task"}
+//				]},
+//				{label: "Help", children: [
+//					{label: "Kanban Taskboard Help"},
+//					{label: "Documentation"},
+//					{type: "separator"},
+//					{label: "Report Bug..."},
+//					{type: "separator"},
+//					{label: "About Kanban Taskboard"}
+//				]}];
+
+			protected function logout():void
+			{
+				dispatchEvent(new UserEvent(UserEvent.LOGOUT))
+			}
+			
+			protected function menuBar_changeHandler(event:MenuEvent):void
+			{
+				var itemClicked:String = event.label
+				
+				switch (itemClicked) {
+					case 'New Project':
+						dispatchEvent(new ProjectEvent(ProjectEvent.CREATEPROJECT));
+						break;
+					case 'Open...':
+						// shtuff
+						Alert.show("To be implemented...");
+						break;
+					case 'Save':
+						Alert.show("To be implemented...");
+						//dispatchEvent(new ProjectEvent(ProjectEvent.SAVEPROJECT));
+						break;
+					case 'Import/Export':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Properties':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Add User...':
+						dispatchEvent(new ProjectEvent(ProjectEvent.ADDUSER));
+						break;
+					case 'Revert Version...':
+						dispatchEvent(new ProjectEvent(ProjectEvent.REVERTVERSION));
+						break;
+					case 'History Report':
+						//Alert.show("To be implemented...");
+						dispatchEvent(new ProjectEvent(ProjectEvent.HISTORYREPORT));
+						break;
+					case 'Project Backlog':
+						//Alert.show("To be implemented...");
+						dispatchEvent(new ProjectEvent(ProjectEvent.EXPORTBACKLOG));
+						break;
+					case 'Notification Settings':
+						dispatchEvent(new ProjectEvent(ProjectEvent.NOTIFSETTINGS));
+						break;
+					case 'Create Task':
+						dispatchEvent(new TaskEvent(TaskEvent.NEW_TASK));
+						break;
+					case 'Edit Task...':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Subscribe to Task':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Kanban Taskboard Help':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Documentation':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'Report Bug...':
+						Alert.show("To be implemented...");
+						// shtuff
+						break;
+					case 'About Kanban Taskboard':
+						Alert.show("Multiplatform Kanban Taskboard\n" +
+							"Version 1.0\n\n" +
+							"Christopher Wood, Anthony Barone, Ian Hunt, Kyle Stork\n\n" +
+							"Copyright 2010\n" +
+							"All images are entitled to their respective owners. All rights reserved.");
+						break;
+				}
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:states>
+		<s:State name="notLoggedIn"/>
+		<s:State name="loggedIn"/>
+		<s:State name="taskboard"/>
+	</s:states>
+	
+	<s:Label text=" KanbanTaskboard" styleName="title" left="0" verticalCenter="0" includeIn="notLoggedIn,loggedIn"/>
+	<mx:Button includeIn="loggedIn, taskboard" right="5" y="2" label="Logout" styleName="title" verticalCenter="0" fontWeight="normal" 
+			   fontFamily="Arial" fontSize="15" click="logout()" cornerRadius="3"/>
+	<s:Label id="loggedInAsLabel" includeIn="loggedIn, taskboard" y="10" width="495" right="95" textAlign="right" fontSize="14"/>
+	
+	<mx:MenuBar id="menuBar" itemDownSkin="skins.MenuBarSelectedSkin" itemOverSkin="skins.MenuBarActiveSkin" 
+				backgroundSkin="skins.MenuBarNoBorderFillSkin" includeIn="taskboard" labelField="@label" 
+				verticalCenter="0" height="28" cornerRadius="2" change="menuBar_changeHandler(event)">
+		<fx:XMLList >
+			<menuitem label="File" >
+				<menuitem label="New Project"/>
+				<menuitem label="Open..."/>
+				<menuitem label="Save" icon="assets/save-icon.png"/>
+				<fake type="separator" />
+				<menuitem label="Import/Export"/>
+				<fake type="separator" />
+				<menuitem label="Properties" />		  
+			</menuitem>
+			<menuitem label="Project">
+				<menuitem label="Add User..."/>
+				<fake type="separator" />
+				<menuitem label="Revert Version..."/>
+				<menuitem label="History Report"/>
+				<menuitem label="Project Backlog"/>
+				<fake type="separator" />
+				<menuitem label="Notification Settings"/>
+			</menuitem>
+			<menuitem label="Task">
+				<menuitem label="Create Task"/>
+				<menuitem label="Edit Task..."/>
+				<fake type="separator" />
+				<menuitem label="Subscribe to Task"/>
+			</menuitem>
+			<menuitem label="Help">
+				<menuitem label="Kanban Taskboard Help"/>
+				<menuitem label="Documentation"/>
+				<fake type="separator" />
+				<menuitem label="Report Bug..."/>
+				<fake type="separator" />
+				<menuitem label="About Kanban Taskboard"/>
+			</menuitem>
+		</fx:XMLList>
+	</mx:MenuBar>
+	
+</s:Group>

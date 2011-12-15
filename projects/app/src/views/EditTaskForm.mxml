@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="540" height="270"
+		 contentBackgroundColor="#5A8EAF" contentBackgroundAlpha="0.14" 
+		 creationComplete="init();"
+		 horizontalCenter="0" verticalCenter="0" xmlns:views="views.*" 
+		 close="titlewindow1_closeHandler(event)"
+		 keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import events.TaskEvent;
+			
+			import flash.text.engine.FontWeight;
+			
+			import mx.controls.Alert;
+			import mx.controls.Text;
+			import mx.events.CloseEvent;
+			import mx.events.ColorPickerEvent;
+			import mx.managers.PopUpManager;
+			import mx.states.State;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			import valueObjects.Task;
+			import valueObjects.TaskData;
+			
+			private var exampleFontSizeDefault:int = 12;
+			private var taskboard:Taskboard = null;
+			private var task:valueObjects.Task;
+			
+			private function init():void 
+			{
+				this.setFocus();
+			}
+			
+			public function populate(taskboard:Taskboard, task:valueObjects.Task):void
+			{
+				this.taskboard = taskboard;
+				this.task = task;
+				taskDescription.text = task.desc;
+				columnDropDown.dataProvider = taskboard.columnNames;
+				columnDropDown.selectedIndex = 0;
+			}
+			
+			private function cancelcreation(): void 
+			{
+				dispatchEvent(new TaskEvent(TaskEvent.CANCEL_TASK));
+			}
+			
+			private function clearForm():void
+			{
+				// clear task description and reset column selecter back to 0
+				taskDescription.text = "";
+				columnDropDown.selectedIndex = 0;
+			}
+			
+			private function submitCreation(): void
+			{
+				if ((taskboard.columns.getItemAt(columnDropDown.selectedIndex) 
+					as Column).currentNumTasks == 8) {
+					// Halt the process, tell user column is full
+					Alert.show("Selected column is full.");
+					
+				} else if (columnDropDown.selectedIndex == -1) {
+					Alert.show("Please select a column.");
+					
+				} else {
+					// Create the task data
+//					var task:valueObjects.Task = new valueObjects.Task();
+//					task.description = taskDescription.text;
+//					task.columnIndex = columnDropDown.selectedIndex;
+//					
+//					dispatchEvent(new TaskEvent(TaskEvent.SUBMIT_TASK, task));
+//					this.task.desc = this.taskDescription.text;
+					//this.task.stageId = this.columnDropDown.selectedIndex;
+//					var te:TaskEvent = new TaskEvent(TaskEvent.SAVE_TASK);
+//					te.fullTask = this.task;
+//					dispatchEvent(te);
+					
+					Alert.show('To be implemented...');
+				}
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				this.clearForm();
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:Label x="22" y="29" text="Edit a Task..." fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="61" width="184"/>
+	<mx:FormItem label="Description:" x="67" y="97" fontSize="14">
+	</mx:FormItem>
+	<s:TextInput id="taskDescription" x="191" y="97" height="23" width="295"/>
+	<mx:FormItem label="Column:" fontSize="14" x="90" y="133">
+	</mx:FormItem>
+	<s:DropDownList id="columnDropDown" x="191" y="135" width="172" contentBackgroundAlpha="1.0" contentBackgroundColor="#FFFFFF" selectedIndex="0">
+	</s:DropDownList>
+	<s:Button x="416" y="196" label="Finish and Save" height="25" click="submitCreation()"/>
+	<s:Button x="328" y="196" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+	
+</s:TitleWindow>

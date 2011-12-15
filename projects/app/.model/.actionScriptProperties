@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="KanbanTaskboard.mxml" projectUUID="78c7cd5d-bb00-4d59-8bc9-79072a59e53e" version="6">
+  <compiler additionalCompilerArguments="-services &quot;D:\kanban-taskboard\tomcat\webapps\testdrive\WEB-INF\flex\services-config.xml&quot; -locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="true" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderLocation="D:/kanban-taskboard/tomcat/webapps/testdrive" outputFolderPath="bin-debug" rootURL="" sourceFolderPath="src" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" verifyDigests="true" warn="true">
+    <compilerSourcePath/>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+      <libraryPathEntry kind="1" linkType="1" path="${DCD_LIB_LOCATION}"/>
+      <libraryPathEntry kind="1" linkType="1" path="${DCD_LOCALE_LOCATION}"/>
+      <libraryPathEntry kind="3" linkType="1" path="${DCD_FIBER_LOCATION}/fiber.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="${DCD_FIBER_LOCALE_LOCATION}/fiber_rb.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="${DCD_FIBER_LOCATION}/playerfds.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="KanbanTaskboard.mxml"/>
+  </applications>
+  <modules/>
+  <buildCSSFiles/>
+</actionScriptProperties>
+
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="488" height="256"
+			   contentBackgroundColor="#5A8EAF" contentBackgroundAlpha="0.14" 
+			   creationComplete="init();"
+			   horizontalCenter="0" verticalCenter="0" xmlns:views="views.*" 
+			   close="titlewindow1_closeHandler(event)"
+			   keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[			
+			import events.ProjectEvent;
+			
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.events.ValidationResultEvent;
+			import mx.managers.PopUpManager;
+			
+			import valueObjects.ProjectData;
+			
+			private var taskboard:Taskboard = null;
+			
+			protected function init():void 
+			{
+				this.clearForm();
+				this.setFocus();
+			}
+			
+			protected function clearForm():void
+			{
+				//newUserEmail.errorString = '';
+				message.text = '';
+				newUserEmail.text = '';
+			}
+			
+			protected function emailValidator_valid(evt:ValidationResultEvent):void {
+				//newUserEmail.errorString = "";
+				message.text = "";
+				var pd:ProjectData = new ProjectData;
+				pd.userToAdd = newUserEmail.text;
+				//Alert.show('To be implemented...');
+				dispatchEvent(new ProjectEvent(ProjectEvent.SUBMITUSER, pd));
+			}
+			
+			protected function emailValidator_invalid(evt:ValidationResultEvent):void {
+				//newUserEmail.errorString = evt.message;
+				message.text = evt.message;
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				this.clearForm();
+				PopUpManager.removePopUp(this);
+			}
+			
+			protected function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:EmailValidator id="emailValidator" 
+						   valid="emailValidator_valid(event);"
+						   invalid="emailValidator_invalid(event);"/>
+	</fx:Declarations>
+	
+	<s:Label x="22" y="29" text="Add User to Project..." fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="61" width="205"/>
+	<s:Button x="381" y="174" label="Submit" height="25" click="emailValidator.validate(newUserEmail.text);"/>
+	<s:Button x="293" y="174" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+	<mx:FormItem label="E-mail Address:" x="41" y="99" fontSize="14">
+	</mx:FormItem>
+	<s:TextInput id="newUserEmail" x="165" y="99" height="23" width="242"/>
+	<s:Label id="message" x="165" y="133" color="#FF0000"/>
+</s:TitleWindow>

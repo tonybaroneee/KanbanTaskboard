@@ -1,0 +1,96 @@
+Oct 20, 2010 11:07:17 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 20, 2010 11:07:17 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 11:07:17 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 602 ms
+Oct 20, 2010 11:07:17 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 20, 2010 11:07:17 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 20, 2010 11:07:19 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 11:07:19 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 20, 2010 11:07:19 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 20, 2010 11:07:19 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2010 ms
+Oct 20, 2010 12:19:33 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 20, 2010 12:19:33 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 12:19:33 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 545 ms
+Oct 20, 2010 12:19:33 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 20, 2010 12:19:33 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 20, 2010 12:19:35 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 12:19:35 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 20, 2010 12:19:35 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/32  config=null
+Oct 20, 2010 12:19:35 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2058 ms
+Oct 20, 2010 1:02:58 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 20, 2010 1:02:58 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 20, 2010 1:02:59 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 20, 2010 1:02:59 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 20, 2010 1:12:34 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 20, 2010 1:12:34 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 1:12:34 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 515 ms
+Oct 20, 2010 1:12:34 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 20, 2010 1:12:34 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 20, 2010 1:12:35 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 1:12:35 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 20, 2010 1:12:35 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 20, 2010 1:12:35 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1714 ms
+Oct 20, 2010 3:15:15 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 20, 2010 3:15:15 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 3:15:15 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 535 ms
+Oct 20, 2010 3:15:15 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 20, 2010 3:15:15 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 20, 2010 3:15:16 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 20, 2010 3:15:17 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 20, 2010 3:15:17 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 20, 2010 3:15:17 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1927 ms

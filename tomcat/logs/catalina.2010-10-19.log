@@ -1,0 +1,538 @@
+Oct 19, 2010 12:45:24 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 12:45:24 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 12:45:24 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1018 ms
+Oct 19, 2010 12:45:25 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 12:45:25 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 12:45:27 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 12:45:28 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 12:45:28 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/62  config=null
+Oct 19, 2010 12:45:28 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 3482 ms
+Oct 19, 2010 9:34:22 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 9:34:22 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:34:22 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 524 ms
+Oct 19, 2010 9:34:22 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 9:34:22 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 9:34:24 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:34:24 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 9:34:24 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/16  config=null
+Oct 19, 2010 9:34:24 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1741 ms
+Oct 19, 2010 6:16:56 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 6:16:56 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 6:16:56 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 524 ms
+Oct 19, 2010 6:16:56 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 6:16:56 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 6:16:57 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 6:16:57 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 6:16:57 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/32  config=null
+Oct 19, 2010 6:16:57 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1702 ms
+Oct 19, 2010 9:35:54 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 9:35:54 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:35:54 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 541 ms
+Oct 19, 2010 9:35:54 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 9:35:54 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 9:35:56 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:35:56 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 9:35:56 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 19, 2010 9:35:56 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1753 ms
+Oct 19, 2010 9:38:52 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 9:38:52 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:38:52 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 552 ms
+Oct 19, 2010 9:38:52 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 9:38:52 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 9:38:54 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:38:54 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 9:38:54 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/32  config=null
+Oct 19, 2010 9:38:54 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1778 ms
+Oct 19, 2010 9:43:35 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 9:43:35 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:43:35 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 546 ms
+Oct 19, 2010 9:43:35 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 9:43:35 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 9:43:36 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:43:37 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 9:43:37 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 19, 2010 9:43:37 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1723 ms
+Oct 19, 2010 9:50:14 PM kanbanbackend.db.UserDaoImpl userAccountCheck
+SEVERE: null
+java.sql.SQLException: no such table: Users
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.PrepStmt.<init>(PrepStmt.java:37)
+	at org.sqlite.Conn.prepareStatement(Conn.java:231)
+	at org.sqlite.Conn.prepareStatement(Conn.java:224)
+	at com.j256.ormlite.jdbc.JdbcDatabaseConnection.compileStatement(JdbcDatabaseConnection.java:72)
+	at com.j256.ormlite.stmt.mapped.MappedPreparedStmt.compile(MappedPreparedStmt.java:36)
+	at com.j256.ormlite.stmt.StatementExecutor.buildIterator(StatementExecutor.java:164)
+	at com.j256.ormlite.stmt.StatementExecutor.query(StatementExecutor.java:110)
+	at com.j256.ormlite.dao.BaseDaoImpl.query(BaseDaoImpl.java:174)
+	at kanbanbackend.db.UserDaoImpl.userAccountCheck(UserDaoImpl.java:122)
+	at kanbanbackend.services.KanbanService.signIn(KanbanService.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 9:51:03 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 9:51:04 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:51:04 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 544 ms
+Oct 19, 2010 9:51:04 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 9:51:04 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 9:51:05 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 9:51:05 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 9:51:05 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/32  config=null
+Oct 19, 2010 9:51:05 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1714 ms
+Oct 19, 2010 9:51:58 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:374)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:07:14 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 10:07:14 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:07:14 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 536 ms
+Oct 19, 2010 10:07:14 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 10:07:14 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 10:07:16 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:07:16 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 10:07:16 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 19, 2010 10:07:16 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1743 ms
+Oct 19, 2010 10:07:38 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:374)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:08:31 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 10:08:31 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:08:31 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 539 ms
+Oct 19, 2010 10:08:31 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 10:08:31 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 10:08:33 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:08:33 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 10:08:33 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 19, 2010 10:08:33 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1771 ms
+Oct 19, 2010 10:08:49 PM kanbanbackend.db.SQLDriver executeQuery
+SEVERE: null
+java.sql.SQLException: no such table: Users
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.Stmt.executeQuery(Stmt.java:89)
+	at kanbanbackend.db.SQLDriver.executeQuery(SQLDriver.java:273)
+	at kanbanbackend.db.UserDaoImpl.userExists(UserDaoImpl.java:97)
+	at kanbanbackend.services.KanbanService.userExists(KanbanService.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:14:22 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 10:14:22 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:14:22 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 536 ms
+Oct 19, 2010 10:14:22 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 10:14:22 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 10:14:24 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:14:24 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 10:14:24 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 19, 2010 10:14:24 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1790 ms
+Oct 19, 2010 10:22:03 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: no such table: sqlite_sequence
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.Stmt.executeQuery(Stmt.java:89)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:377)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:23:23 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: no such table: sqlite_sequence
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.Stmt.executeQuery(Stmt.java:89)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:377)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:47:43 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 10:47:43 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:47:43 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 550 ms
+Oct 19, 2010 10:47:43 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 10:47:43 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 10:47:45 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:47:45 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 10:47:45 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/35  config=null
+Oct 19, 2010 10:47:45 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1827 ms
+Oct 19, 2010 10:51:23 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:374)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 10:58:58 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 10:58:58 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:58:58 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 554 ms
+Oct 19, 2010 10:58:58 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 10:58:58 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 10:58:59 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 10:59:00 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 10:59:00 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/34  config=null
+Oct 19, 2010 10:59:00 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1761 ms
+Oct 19, 2010 10:59:44 PM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: The url cannot be null
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:374)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 19, 2010 11:11:00 PM org.apache.catalina.startup.HostConfig checkResources
+INFO: Reloading context [/testdrive]
+Oct 19, 2010 11:16:33 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 19, 2010 11:16:33 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 11:16:33 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 531 ms
+Oct 19, 2010 11:16:34 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 19, 2010 11:16:34 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 19, 2010 11:16:35 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 19, 2010 11:16:35 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 19, 2010 11:16:35 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/33  config=null
+Oct 19, 2010 11:16:35 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1792 ms

@@ -1,0 +1,11 @@
+18/11/10 14:19:22 INFO  dnsserver: Autodiscovery is enabled - trying to discover your system's DNS Servers
+18/11/10 14:19:22 INFO  dnsserver: Adding autodiscovered server 192.168.1.1
+18/11/10 14:19:22 INFO  dnsserver: DNS Server is: 192.168.1.1
+18/11/10 14:41:38 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 14:41:38 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 14:46:20 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 14:46:20 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 20:41:59 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 20:42:00 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 20:46:41 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 20:46:41 INFO  dnsserver: Couldn't find CNAME records for domain test.com.

@@ -1,0 +1,54 @@
+Oct 14, 2010 12:08:08 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 14, 2010 12:08:08 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:08:08 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 522 ms
+Oct 14, 2010 12:08:08 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 14, 2010 12:08:08 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 14, 2010 12:08:10 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:08:10 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 14, 2010 12:08:10 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/32  config=null
+Oct 14, 2010 12:08:10 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 2335 ms
+Oct 14, 2010 12:12:21 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 14, 2010 12:12:21 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:12:21 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 506 ms
+Oct 14, 2010 12:12:21 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 14, 2010 12:12:21 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 14, 2010 12:12:23 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:12:23 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 14, 2010 12:12:23 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 14, 2010 12:12:23 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1634 ms
+Oct 14, 2010 12:44:50 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 14, 2010 12:44:50 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:44:50 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 511 ms
+Oct 14, 2010 12:44:50 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 14, 2010 12:44:50 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 14, 2010 12:44:51 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 14, 2010 12:44:51 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 14, 2010 12:44:51 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/31  config=null
+Oct 14, 2010 12:44:51 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1617 ms

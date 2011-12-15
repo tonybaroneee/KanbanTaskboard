@@ -1,0 +1,37 @@
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+global
+{
+	roll-over-color: #D1DEB5;
+	focus-color: #D1DEB5;
+	font-family: main;
+	color: #152424;
+	content-background-alpha: 0.0;
+	content-background-color: #FFFFFF;
+	font-size: 12;
+}
+
+@font-face {
+	src: url("assets/MyriadPro-Regular.otf");
+	fontFamily: "main";
+	font-weight: normal;
+	embedAsCFF: true;
+}
+
+@font-face {
+	src: url("assets/MyriadPro-Bold.otf");
+	fontFamily: "main";
+	font-weight: bold;
+	embedAsCFF: false;
+}
+
+s|DataGroup {
+	color: #929393;
+}
+
+.title {
+	font-size: 16;
+	font-weight: bold;
+}
+

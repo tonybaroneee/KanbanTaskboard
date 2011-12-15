@@ -1,0 +1,8 @@
+18/11/10 02:40:56 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 02:40:56 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 02:45:38 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 02:45:38 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 08:41:17 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 08:41:17 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+18/11/10 08:45:59 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+18/11/10 08:45:59 INFO  dnsserver: Couldn't find CNAME records for domain test.com.

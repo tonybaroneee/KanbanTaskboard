@@ -1,0 +1,63 @@
+25/02/11 11:59:29 INFO  dnsserver: Autodiscovery is enabled - trying to discover your system's DNS Servers
+25/02/11 11:59:29 INFO  dnsserver: Adding autodiscovered server 192.168.2.1
+25/02/11 11:59:29 INFO  dnsserver: Adding autodiscovered server 66.133.170.2
+25/02/11 11:59:29 INFO  dnsserver: Adding autodiscovered server 66.133.150.12
+25/02/11 11:59:29 INFO  dnsserver: Adding autodiscovered server 170.215.255.114
+25/02/11 11:59:29 INFO  dnsserver: DNS Server is: 192.168.2.1
+25/02/11 11:59:29 INFO  dnsserver: DNS Server is: 66.133.170.2
+25/02/11 11:59:29 INFO  dnsserver: DNS Server is: 66.133.150.12
+25/02/11 11:59:29 INFO  dnsserver: DNS Server is: 170.215.255.114
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 11:59:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:07:51 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:46:23 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:46:28 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 12:46:54 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:46:54 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 12:51:54 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:51:54 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 12:52:15 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 12:52:15 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 13:02:15 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 13:02:15 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 13:02:36 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 13:02:36 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 13:47:41 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 13:47:46 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 13:48:12 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 13:48:12 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+25/02/11 15:48:12 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+25/02/11 15:48:33 INFO  dnsserver: Couldn't resolve MX records for domain test.com.

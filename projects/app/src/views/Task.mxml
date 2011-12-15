@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 width="130" height="128" contentBackgroundAlpha="0.0"
+		 rollOver="onMouseover()" rollOut="onMouseleave()" creationComplete="init()">
+	<fx:Script>
+		<![CDATA[
+			import events.TaskEvent;
+			
+			import mx.controls.Alert;
+			import mx.core.DragSource;
+			import mx.core.IUIComponent;
+			import mx.events.FlexMouseEvent;
+			import mx.managers.DragManager;
+			import mx.managers.FocusManager;
+			
+			import skins.ConfigureTaskButtonSkin;
+			import skins.DeleteTaskButtonSkin;
+			
+			import spark.events.TextOperationEvent;
+			
+			import valueObjects.Task;
+			
+			import views.Taskboard;
+			
+			public var sourceColumn:Column;
+			private var canDrag:Boolean = true;
+			private var notificationEnabled:Boolean = false;
+			public var task:valueObjects.Task;
+			
+			private function init():void
+			{
+				// a mouseDown event will start the drag
+				this.taskDescription.addEventListener( MouseEvent.MOUSE_DOWN, catchMouseDown );
+				this.taskDescription.addEventListener( MouseEvent.MOUSE_MOVE, catchMouseMove );
+				
+			}
+			
+			public function catchMouseDown( mouseEvent:MouseEvent ):void
+			{
+				// This is a work around so that the user can't accidently initiate drag when clicking
+				// on the scrollbar (if there is one present)
+				if (mouseEvent.target.parent.parent.parent.parent.parent.parent is TextArea) {
+					// Mouse down on scroll
+					canDrag = false;
+				} else
+				{
+					// Mouse down on text area
+					canDrag = true;
+				}
+			}
+			
+			public function catchMouseMove( mouseEvent:MouseEvent ):void
+			{
+				if (mouseEvent.target.parent.parent.parent.parent.parent.parent is TextArea) {
+					// Do nothing, this represents the scroller
+				} else if (mouseEvent.currentTarget is TextArea && mouseEvent.buttonDown) 
+				{
+					var txt:TextArea = mouseEvent.currentTarget as TextArea;
+					if (txt.id == 'taskDescription' && canDrag)
+					{
+						beginDrag(mouseEvent);
+					}
+				}
+			}
+			
+			public function beginDrag( mouseEvent:MouseEvent ):void
+			{
+				// the drag initiator is the object being dragged (target of the mouse event)
+				var dragInitiator:IUIComponent = mouseEvent.currentTarget as IUIComponent;
+				
+				// the drag source contains data about what's being dragged
+				var dragSource:DragSource = new DragSource();
+				
+				// ask the DragManger to begin the drag
+				DragManager.doDrag( dragInitiator, dragSource, mouseEvent, null );
+				
+				sourceColumn = dragInitiator.parent.parent.parent.parent.parent.parent as Column;
+			}
+			
+			private function onMouseover(): void {
+				if (!notificationEnabled) {
+					currentState = 'hovered'
+				} else {
+					currentState = 'hovered_notify'
+				}
+			}
+			
+			private function onMouseleave(): void {
+				if (!notificationEnabled) {
+					currentState = "normal"
+				} else {
+					currentState = 'normal_notify'
+				}
+			}
+			
+			private function lowerPriority(): void {
+				
+			}
+			
+			private function raisePriority(): void {
+				
+			}
+			
+			private function flagNotification(): void {
+				if (!notificationEnabled) {
+					emailbutton.alpha = 0.0;
+					emailbuttonselected.alpha = 1.0;
+					notificationEnabled = true;
+				} else {
+					emailbuttonselected.alpha = 0.0;
+					emailbutton.alpha = 1.0;
+					notificationEnabled = false;
+				}
+			}
+			
+			private function emailSettings(): void {
+				
+			}
+
+
+			protected function deletetaskbutton_clickHandler(event:MouseEvent):void
+			{
+				(this.parent.parent.parent.parent.parent as Column).remove(this, false);
+			}
+
+
+			protected function tasksettingsbutton_clickHandler(event:MouseEvent):void
+			{
+				this.task.desc = this.taskDescription.text;
+				var te:TaskEvent = new TaskEvent(TaskEvent.EDIT_TASK);
+				te.fullTask = task;
+				dispatchEvent(te);
+			}
+			
+			protected function editTaskDescription():void
+			{
+				taskDescription.visible = false;
+				taskDescriptionEdit.text = taskDescription.text;
+				taskDescriptionEdit.setFocus();
+				taskDescriptionEdit.selectAll();
+				taskDescriptionEdit.visible = true;
+					
+			}
+
+			protected function taskDescriptionEdit_mouseFocusChangeHandler(event:FocusEvent):void
+			{
+				
+				try {
+					if (event.relatedObject.parent.parent.parent.parent.parent.parent is TextArea)
+					{
+						// The scroll bar of the text area is focused, make sure this is the taskDescriptionEdit
+						// scroll bar, then simply return because we don't want save the edit yet
+						var txt:TextArea = event.relatedObject.parent.parent.parent.parent.parent.parent as TextArea
+						if (txt.id == "taskDescriptionEdit") {
+							return;
+						}
+					}
+				
+				} catch(error:Error) {
+					// Clicking on any other component brings you here, so proceed with the save edit code below
+				}
+				
+				taskDescription.text = taskDescriptionEdit.text;
+				taskDescriptionEdit.visible = false;
+				taskDescription.selectable = false;
+				taskDescription.editable = false;
+				taskDescription.visible = true;
+				
+				this.task.desc = this.taskDescription.text;
+				var te:TaskEvent = new TaskEvent(TaskEvent.SAVE_TASK);
+				te.fullTask = task;
+				dispatchEvent(te);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Metadata>
+	</fx:Metadata>
+	
+	<fx:Declarations>
+	</fx:Declarations>
+	
+	<s:states>
+		<s:State name="normal"/>
+		<s:State name="normal_notify"/>
+		<s:State name="hovered"/>
+		<s:State name="hovered_notify"/>
+	</s:states>
+	
+	<s:transitions>
+		<s:Transition toState="hovered">
+			<s:Fade duration="300" alphaFrom="0.0" alphaTo="1.0" 
+					targets="{[deletetaskbutton, tasksettingsbutton, emailbutton, 
+					priorityLabel, downPriorityButton, upPriorityButton]}"/>
+		</s:Transition>
+		
+		<s:Transition toState="normal">
+			<s:Fade duration="500" alphaFrom="1.0" alphaTo="0.0"
+					targets="{[deletetaskbutton, tasksettingsbutton, emailbutton, 
+					priorityLabel, downPriorityButton, upPriorityButton]}"/>
+		</s:Transition>
+		
+		<s:Transition toState="hovered_notify">
+			<s:Fade duration="300" alphaFrom="0.0" alphaTo="1.0" 
+					targets="{[deletetaskbutton, tasksettingsbutton, emailbuttonselected, 
+					priorityLabel, downPriorityButton, upPriorityButton]}"/>
+		</s:Transition>
+		
+		<s:Transition toState="normal_notify">
+			<s:Fade duration="500" alphaFrom="1.0" alphaTo="0.0"
+					targets="{[deletetaskbutton, tasksettingsbutton, emailbuttonselected, 
+					priorityLabel, downPriorityButton, upPriorityButton]}"/>
+		</s:Transition>
+	</s:transitions>
+	
+	<mx:Image id="postItImage" x="0" y="25" source="assets/post-it-larger.png" width="98" height="103"/>
+	<s:TextArea id="taskDescriptionEdit" mouseFocusChange="taskDescriptionEdit_mouseFocusChangeHandler(event)" x="0" y="25" height="103" width="98" contentBackgroundAlpha="0.0" 
+			focusOut="taskDescriptionEdit_mouseFocusChangeHandler(event)" visible="false" paddingLeft="5" paddingTop="5" paddingBottom="20" paddingRight="5"/>
+	<s:TextArea id="taskDescription" editable="false" selectable="false" borderVisible="false" x="0" y="25" height="103" width="100" doubleClickEnabled="true" 
+			doubleClick="editTaskDescription()" visible="true" paddingLeft="5" paddingTop="5" paddingBottom="25" paddingRight="5"/>
+	
+	<s:Button id="deletetaskbutton" toolTip="Delete Task" skinClass="skins.DeleteTaskButtonSkin" click="deletetaskbutton_clickHandler(event)" x="105" y="28" width="16" includeIn="hovered, hovered_notify" cornerRadius="0" height="16" />
+	<s:Button id="tasksettingsbutton" toolTip="Task Settings" click="tasksettingsbutton_clickHandler(event)" skinClass="skins.ConfigureTaskButtonSkin" x="105" y="49" width="16" includeIn="hovered, hovered_notify" cornerRadius="0" height="16" />
+	<s:Button id="emailbutton" toolTip="Subscribe to Task" click="flagNotification()" skinClass="skins.MailTaskButtonSkin" x="105" y="70" width="16" includeIn="hovered, hovered_notify" cornerRadius="0" height="16" alpha="1.0"/>
+	<s:Button id="emailbuttonselected" toolTip="Subscribe to Task" click="flagNotification()" skinClass="skins.SelectedMailTaskButtonSkin" x="105" y="70" width="16" includeIn="hovered, hovered_notify" cornerRadius="0" height="16" alpha="0.0" />
+	<s:Label id="priorityLabel" includeIn="hovered, hovered_notify" x="16.35" y="12" text="Priority:" fontSize="10" />
+	<s:Button id="upPriorityButton" toolTip="Raise" skinClass="skins.PriorityUpButtonSkin" x="75.4" y="7.45" width="16" cornerRadius="0" includeIn="hovered, hovered_notify" height="16" />
+	<s:Button id="downPriorityButton" toolTip="Lower" skinClass="skins.PriorityDownButtonSkin" x="54.45" y="7.45" width="16" cornerRadius="0" height="16" includeIn="hovered, hovered_notify" />
+</s:Group>

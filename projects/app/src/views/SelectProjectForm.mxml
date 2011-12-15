@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009"
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx"
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14">
+	
+	<fx:Script>
+		<![CDATA[
+			import events.ProjectEvent;
+			import events.UserEvent;
+			
+			import flash.utils.Dictionary;
+			
+			import mx.collections.ArrayCollection;
+			import mx.collections.ArrayList;
+			import mx.controls.Alert;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.ProjectData;
+			
+			public var projectsMap:Object;
+			[Bindable]
+			public var projects:ArrayCollection;
+			private var selectedIndex:int = -1;
+			
+			private function createProject(): void {
+				dispatchEvent(new ProjectEvent(ProjectEvent.CREATEPROJECT))
+			}
+			
+			public function browse(): void
+			{
+				dispatchEvent(new UserEvent(UserEvent.BROWSEPROJECTS))
+			}
+			
+			protected function openProject():void
+			{
+				var id:int = projectsMap[projects.getItemAt(selectedIndex)];
+				var pd:ProjectData = new ProjectData;
+				pd.id = id;
+				dispatchEvent(new ProjectEvent(ProjectEvent.OPENPROJECT, pd));
+			}
+			
+			protected function list1_changeHandler(event:IndexChangeEvent):void
+			{
+				openbutton.enabled = true;
+				selectedIndex = event.newIndex;
+			}
+			
+			public function populateProjects():void {
+				if (projects) {
+					projects.removeAll();
+				}
+				var retVal:ArrayCollection = new ArrayCollection();
+				for (var key:String in projectsMap) {
+					retVal.addItem(key);
+				}
+				projects = retVal;
+			}
+
+		]]>
+	</fx:Script>
+	<s:BorderContainer width="535" height="346" horizontalCenter="0" dropShadowVisible="true" cornerRadius="4" borderColor="#103661" borderWeight="1">
+		
+		<s:Label x="31" y="36" text="Welcome!" width="142" height="36" fontSize="30" fontStyle="normal" fontWeight="normal" fontFamily="Georgia" 
+				 textDecoration="none" textAlign="left" verticalAlign="top" chromeColor="#CCCCCC" color="#000000"/>
+		<s:Label x="167" y="36" text="" width="331" height="36" fontSize="34" fontStyle="italic" fontWeight="normal" fontFamily="Times New Roman" 
+				 textDecoration="none" textAlign="left" verticalAlign="top" chromeColor="#CCCCCC" color="#000000"/>
+		<mx:HRule x="48" y="80" width="352"/>
+		<s:Label x="44" y="116" text="Start a New Project..." fontSize="16" fontWeight="normal" fontStyle="normal" textDecoration="none"/>
+		<s:Label x="44" y="227" text="Import a Project..." fontSize="16" fontWeight="normal" fontStyle="normal" textDecoration="none"/>
+		<mx:VRule x="301" y="116" height="191"/>
+		<s:Label x="321" y="116" text="Select an Existing Project..." fontSize="16" fontWeight="normal" fontStyle="normal" textDecoration="none"/>
+		<s:Button x="80" y="161" label="Create a New Project" width="166" height="27" click="createProject()"/>
+		<s:Button x="80" y="273" label="Import Project From Backlog" width="166" height="27" 
+				  click="Alert.show('To be implemented...');"/>
+		<s:List id="projectList" x="333" y="151" width="159" height="113" 
+				dataProvider="{this.projects}" change="list1_changeHandler(event)"/>
+		<s:Button id="openbutton" x="422" y="277" label="Open" height="24" click="openProject()" enabled="false"/>
+	</s:BorderContainer>
+</s:Group>

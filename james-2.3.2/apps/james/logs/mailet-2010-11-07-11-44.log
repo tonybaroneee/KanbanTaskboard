@@ -1,0 +1,7 @@
+07/11/10 11:44:08 INFO  James.Mailet: RemoteAddrNotInNetwork: Authorized addresses: [127.0.0.1/255.255.255.255]
+07/11/10 11:44:08 INFO  James.Mailet: RemoteDelivery: maxRetries is larger than total number of attempts specified. Increasing last delayTime with 19 attempts 
+07/11/10 11:44:08 INFO  James.Mailet: RemoteDelivery: Delay of 21600000 msecs is now attempted: 20 times
+07/11/10 11:44:33 INFO  James.Mailet: ToRepository: Storing mail Mail1289148272953-0 in file://var/mail/address-error/
+07/11/10 11:44:45 INFO  James.Mailet: ToRepository: Storing mail Mail1289148285353-1 in file://var/mail/address-error/
+07/11/10 11:49:56 INFO  James.Mailet: ToRepository: Storing mail Mail1289148596051-2 in file://var/mail/address-error/
+07/11/10 11:50:13 INFO  James.Mailet: ToRepository: Storing mail Mail1289148613149-3 in file://var/mail/address-error/

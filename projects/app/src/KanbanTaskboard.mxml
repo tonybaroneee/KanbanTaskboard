@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" 
+			   xmlns:services="services.*" 
+			   xmlns:views="views.*" skinClass="skins.ScrollApplicationSkin"
+			   applicationComplete="applicationCompleteHandler(event)">
+	
+	<fx:Declarations>
+		<mx:RemoteObject id="service" destination="kanbanService"/> 		
+	</fx:Declarations>
+	
+	<fx:Script>
+		<![CDATA[
+			import commands.AddUserCommand;
+			import commands.BrowseProjectsCommand;
+			import commands.NewProjectCommand;
+			import commands.NewTaskCommand;
+			import commands.OpenProjectCommand;
+			import commands.RegisterCommand;
+			import commands.SaveProjectCommand;
+			import commands.SignInCommand;
+			import commands.UpdateTaskCommand;
+			
+			import events.ProjectEvent;
+			import events.TaskEvent;
+			import events.UserEvent;
+			
+			import mx.containers.TitleWindow;
+			import mx.controls.Alert;
+			import mx.core.IFlexDisplayObject;
+			import mx.events.FlexEvent;
+			import mx.events.FlexMouseEvent;
+			import mx.managers.PopUpManager;
+			
+			import valueObjects.Project;
+			import valueObjects.ProjectData;
+			import valueObjects.Stage;
+			import valueObjects.TaskData;
+			import valueObjects.User;
+			
+			import views.BrowseProjectsForm;
+			import views.Column;
+			import views.EditTaskForm;
+			import views.ExportBacklogForm;
+			import views.HistoryReportForm;
+			import views.NewTaskForm;
+			import views.NewUserForm;
+			import views.RevertVersionForm;
+			import views.SubscribeTaskForm;
+			import views.ProjectTemplateForm;
+			import views.Task;
+			
+			public var user:User;
+			public var project:Project;
+			private var newTaskPopup:IFlexDisplayObject;
+			private var exportBacklogPopup:IFlexDisplayObject;
+			private var historyReportPopup:IFlexDisplayObject;
+			private var revertVersionPopup:IFlexDisplayObject;
+			private var notifSettingsPopup:IFlexDisplayObject;
+			private var newUserPopup:IFlexDisplayObject;
+			private var editTaskPopup:IFlexDisplayObject;
+			private var templatePopup:IFlexDisplayObject;
+			
+			//putting this here, not sure if it will work
+			private static var instance:KanbanTaskboard;
+			
+			public static function getInstance():KanbanTaskboard {
+				if(!KanbanTaskboard.instance) {
+					KanbanTaskboard.instance = new KanbanTaskboard();
+				} 
+				return KanbanTaskboard.instance;
+			}
+			
+			
+			protected function applicationCompleteHandler(event:FlexEvent):void
+			{
+				this.addEventListener(UserEvent.SIGNIN, this.login_signInHandler);
+				this.addEventListener(UserEvent.REGISTER, this.login_registerHandler);
+				this.addEventListener(UserEvent.LOGOUT, this.login_logoutHandler);
+				this.addEventListener(UserEvent.BROWSEPROJECTS, this.selectproject_browseProjectsHandler);
+				
+				this.systemManager.addEventListener(TaskEvent.SUBMIT_TASK, this.createtask_submitTaskHandler);
+				this.systemManager.addEventListener(TaskEvent.SUBMIT_TASK_EDIT, this.edittask_submitTaskHandler);
+				this.systemManager.addEventListener(ProjectEvent.SUBMITUSER, this.adduser_submitTaskHandler);
+				this.addEventListener(TaskEvent.NEW_TASK, this.taskboard_newTaskHandler);
+				this.addEventListener(TaskEvent.EDIT_TASK, this.taskboard_editTaskHandler);
+				this.addEventListener(ProjectEvent.CREATEPROJECT, this.selectproject_createProjectHandler);
+				this.addEventListener(ProjectEvent.CANCELCREATION, this.createproject_cancelCreationHandler);
+				this.addEventListener(ProjectEvent.SUBMITCREATION, this.createproject_submitCreationHandler);
+				this.addEventListener(ProjectEvent.SAVEPROJECT, this.taskboard_saveProjectHandler);
+				this.addEventListener(ProjectEvent.OPENPROJECT, this.selectproject_openProjectHandler);
+				this.addEventListener(ProjectEvent.OPENTEMPLATES, this.createproject_openTemplatesHandler);
+				
+				this.addEventListener(ProjectEvent.ADDUSER, this.taskboard_addUser);
+				this.addEventListener(ProjectEvent.EXPORTBACKLOG, this.taskboard_exportBacklog);
+				this.addEventListener(ProjectEvent.HISTORYREPORT, this.taskboard_historyReport);
+				this.addEventListener(ProjectEvent.REVERTVERSION, this.taskboard_revertVersion);
+				this.addEventListener(ProjectEvent.NOTIFSETTINGS, this.taskboard_notifSettings);
+				this.addEventListener(TaskEvent.SAVE_TASK, this.task_updateTaskHandler );
+			}
+			
+			
+			protected function login_signInHandler(event:UserEvent):void
+			{
+				event.taskboard = this;
+				new SignInCommand(event).execute();				
+			}
+			
+			protected function login_registerHandler(event:UserEvent):void
+			{
+				event.taskboard = this;
+				new RegisterCommand(event).execute();				
+			}
+			
+			protected function login_logoutHandler(event:UserEvent):void
+			{
+				header.currentState = "notLoggedIn";
+				currentState='loginScreen';
+				login.clearLoginForm();
+				login.currentState='signin';
+			}
+			
+			protected function selectproject_openProjectHandler(event:ProjectEvent):void
+			{
+				event.taskboard = this;
+				new OpenProjectCommand(event).execute();
+			}
+			
+			protected function selectproject_browseProjectsHandler(event:UserEvent):void
+			{
+				event.taskboard = this;
+				event.user = this.user;
+				new BrowseProjectsCommand(event).execute();
+			}
+			
+			protected function selectproject_createProjectHandler(event:ProjectEvent):void
+			{
+				currentState='createProjectScreen';
+				createproject.resetAllFieldButton_clickHandler(null, true);
+				createproject.currentState = 'generalInfo'
+			}
+			
+			protected function taskboard_newTaskHandler(event:TaskEvent):void
+			{
+				newTaskPopup = PopUpManager.createPopUp(this, NewTaskForm, true);
+				(newTaskPopup as NewTaskForm).populate(taskboard, this.project);
+				PopUpManager.centerPopUp(newTaskPopup);
+			}
+			
+			protected function taskboard_createProjectHandler(event:ProjectEvent):void
+			{
+				currentState='createProjectScreen';
+				createproject.resetAllFieldButton_clickHandler(null, true);
+				createproject.currentState = 'generalInfo';
+			}
+			
+			protected function taskboard_saveProjectHandler(event:ProjectEvent):void
+			{
+				event.taskboard = this;
+				new SaveProjectCommand(event).execute();
+			}
+			
+			protected function taskboard_editTaskHandler(event:TaskEvent):void
+			{				
+				editTaskPopup = PopUpManager.createPopUp(this, EditTaskForm, true);
+				(editTaskPopup as EditTaskForm).populate(taskboard, event.fullTask);				
+				PopUpManager.centerPopUp(editTaskPopup);
+			}
+			
+			protected function createproject_cancelCreationHandler(event:ProjectEvent):void
+			{
+				currentState='selectProjectScreen';
+			}
+			
+			protected function createproject_submitCreationHandler(event:ProjectEvent):void
+			{
+				event.taskboard = this;
+				event.project.userEmail = this.user.email;
+				new NewProjectCommand(event).execute();
+				header.currentState = 'taskboard';			
+			}
+			
+			protected function createproject_openTemplatesHandler(event:ProjectEvent):void
+			{				
+				templatePopup = PopUpManager.createPopUp(this, ProjectTemplateForm, true);
+				//(templatePopup as ProjectTemplateForm).populate(taskboard, event.fullTask);				
+				PopUpManager.centerPopUp(templatePopup);
+			}
+			
+			protected function createtask_submitTaskHandler(event:TaskEvent):void
+			{
+				if (event.task == null) {
+					// event fired from quick add task button in column
+					var newTaskData:TaskData = new TaskData("Enter task description", event.colIndex,
+															(project.workspace.stages.getItemAt(event.colIndex) as valueObjects.Stage).id,
+															user.id);
+					
+					//taskboard.addTask(newTaskData);
+					event.task = newTaskData;
+					//event.project = project;
+				} else {
+					event.task.stageId = (project.workspace.stages.getItemAt(event.task.columnIndex) as valueObjects.Stage).id;
+					event.task.userId = user.id;
+					// event fired from new task popup window
+					PopUpManager.removePopUp(newTaskPopup);
+					//taskboard.addTask(event.task);
+				}
+				event.taskboard = this;
+				event.project = project;
+				new NewTaskCommand(event).execute();
+			}
+			
+			protected function edittask_submitTaskHandler(event:TaskEvent):void
+			{
+				// TODO
+			}
+			
+			protected function taskboard_addUser(event:ProjectEvent):void
+			{
+				newUserPopup = PopUpManager.createPopUp(this, NewUserForm, true);
+				PopUpManager.centerPopUp(newUserPopup);				
+			}
+			
+			protected function adduser_submitTaskHandler(event:ProjectEvent):void
+			{
+				PopUpManager.removePopUp(newUserPopup);
+				new AddUserCommand(event).execute();
+			}
+			
+			protected function taskboard_notifSettings(event:ProjectEvent):void
+			{
+				notifSettingsPopup = PopUpManager.createPopUp(this, SubscribeTaskForm, true);
+				PopUpManager.centerPopUp(notifSettingsPopup);
+			}
+			
+			protected function taskboard_revertVersion(event:ProjectEvent):void
+			{
+				revertVersionPopup = PopUpManager.createPopUp(this, RevertVersionForm, true);
+				(revertVersionPopup as RevertVersionForm).populate(this.project);
+				PopUpManager.centerPopUp(revertVersionPopup);
+			}
+			
+			protected function taskboard_exportBacklog(event:ProjectEvent):void
+			{
+				//exportBacklogPopup = PopUpManager.createPopUp(this, ExportBacklogForm, true);
+				//PopUpManager.centerPopUp(exportBacklogPopup);
+				
+				var req:URLRequest = new URLRequest("http://caik.se.rit.edu/testdrive/Backlog"); 
+				var vars:URLVariables = new URLVariables();
+				vars.projectId = project.id;
+				req.data = vars; 
+				req.method = URLRequestMethod.POST; 
+				navigateToURL(req, "_blank");
+			}
+
+			protected function taskboard_historyReport(event:ProjectEvent):void
+			{
+				//historyReportPopup = PopUpManager.createPopUp(this, HistoryReportForm, true);
+				//(historyReportPopup as HistoryReportForm).populate(this.project);
+				//PopUpManager.centerPopUp(historyReportPopup);
+				
+				var req:URLRequest = new URLRequest("http://caik.se.rit.edu/testdrive/HistoryReport"); 
+				var vars:URLVariables = new URLVariables();
+				vars.projectId = project.id;
+				req.data = vars; 
+				req.method = URLRequestMethod.POST; 
+				navigateToURL(req, "_blank");
+			}
+			
+			protected function task_updateTaskHandler(event:TaskEvent) : void
+			{
+				event.taskboard = this;
+				//make sure event.fullTask is set instead of Task
+				new UpdateTaskCommand(event).execute();
+			}
+
+			
+		]]>
+	</fx:Script>
+	
+	<fx:Style source="styles.css"/>
+	
+	<s:states>
+		<s:State name="loginScreen"/>
+		<s:State name="selectProjectScreen"/>
+		<s:State name="createProjectScreen"/>
+		<s:State name="taskboardScreen"/>
+	</s:states>
+	
+	<s:transitions>
+		<s:Transition toState="loginScreen">
+			<s:Sequence>
+				<s:Fade duration="500" target="{login}"/>
+			</s:Sequence>
+		</s:Transition>
+		
+		<s:Transition toState="selectProjectScreen">
+			<s:Sequence>
+				<s:Fade duration="500" target="{selectproject}"/>
+			</s:Sequence>
+		</s:Transition>
+		
+		<s:Transition toState="backToSelectProjectScreen">
+			<s:Sequence>
+				<s:Fade duration="500" target="{selectproject}"/>
+			</s:Sequence>
+		</s:Transition>
+		
+		<s:Transition toState="createProjectScreen">
+			<s:Sequence>
+				<s:Fade duration="500" target="{createproject}"/>
+			</s:Sequence>
+		</s:Transition>	
+		
+		<s:Transition toState="taskboardScreen" >
+			<s:Sequence>
+				<s:Fade duration="500" target="{taskboard}"/>
+			</s:Sequence>
+		</s:Transition>
+	</s:transitions>
+	
+	<s:controlBarContent>
+		<views:Header contentBackgroundAlpha="1" id="header"/>
+	</s:controlBarContent>
+	
+	<views:LoginForm id="login" verticalCenter="0" horizontalCenter="0" includeIn="loginScreen"  />
+	<views:SelectProjectForm id="selectproject" verticalCenter="0" horizontalCenter="0" 
+					includeIn="selectProjectScreen"/>
+	<views:NewProjectWizard id="createproject" verticalCenter="0" horizontalCenter="0"
+							includeIn="createProjectScreen"/>
+	<views:Taskboard id="taskboard" left="0" top="0" bottom="0" includeIn="taskboardScreen"/>
+	
+</s:Application>

@@ -1,0 +1,259 @@
+22/11/10 18:48:34 INFO  dnsserver: Autodiscovery is enabled - trying to discover your system's DNS Servers
+22/11/10 18:48:34 INFO  dnsserver: Adding autodiscovered server 209.18.47.61
+22/11/10 18:48:34 INFO  dnsserver: Adding autodiscovered server 209.18.47.62
+22/11/10 18:48:34 INFO  dnsserver: DNS Server is: 209.18.47.61
+22/11/10 18:48:34 INFO  dnsserver: DNS Server is: 209.18.47.62
+22/11/10 18:48:36 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:48:37 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:48:58 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:48:58 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:49:19 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:49:19 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:49:40 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:49:40 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:50:01 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:50:01 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:50:22 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:50:22 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:50:43 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:50:43 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:51:04 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:51:04 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:51:25 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:51:25 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:51:46 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:51:46 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:52:08 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:52:08 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:52:29 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:52:29 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:52:50 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:52:50 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:53:11 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:53:11 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:53:32 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:53:32 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:53:53 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:53:53 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:54:14 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:54:14 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:54:35 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:54:35 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:54:56 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:54:56 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:55:17 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:55:17 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:55:38 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:55:38 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:56:00 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:56:00 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:56:21 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:56:21 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:56:42 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:56:42 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 18:57:03 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 18:57:03 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:00:07 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:00:07 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:00:28 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:00:28 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:00:49 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:00:49 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:01:10 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:01:10 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:01:31 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:01:31 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:01:52 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:01:52 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:02:13 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:02:13 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:02:35 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:02:35 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:02:56 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:02:56 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:03:17 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:03:17 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:10:49 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:10:49 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 19:45:21 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 19:45:21 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 22:40:49 WARN  dnsserver: Query error!
+java.net.NoRouteToHostException: No route to host: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecordsRaw(DNSServer.java:202)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:237)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:49 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 22:40:51 WARN  dnsserver: Query error!
+java.net.SocketException: Network is unreachable: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:249)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:51 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 22:40:51 ERROR dnsserver: Couldn't resolve IP address for host test.com.
+22/11/10 22:40:51 WARN  dnsserver: Query error!
+java.net.SocketException: Network is unreachable: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecordsRaw(DNSServer.java:202)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:237)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:51 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 22:40:51 WARN  dnsserver: Query error!
+java.net.SocketException: Network is unreachable: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:249)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:51 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 22:40:51 ERROR dnsserver: Couldn't resolve IP address for host test.com.
+22/11/10 22:40:52 WARN  dnsserver: Query error!
+java.net.SocketException: Network is unreachable: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecordsRaw(DNSServer.java:202)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:237)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:52 INFO  dnsserver: Couldn't resolve MX records for domain test.com.
+22/11/10 22:40:52 WARN  dnsserver: Query error!
+java.net.SocketException: Network is unreachable: connect
+	at sun.nio.ch.Net.connect(Native Method)
+	at sun.nio.ch.DatagramChannelImpl.connect(DatagramChannelImpl.java:530)
+	at org.xbill.DNS.UDPClient.connect(UDPClient.java:26)
+	at org.xbill.DNS.UDPClient.sendrecv(UDPClient.java:68)
+	at org.xbill.DNS.SimpleResolver.send(SimpleResolver.java:256)
+	at org.xbill.DNS.ExtendedResolver$Resolution.start(ExtendedResolver.java:93)
+	at org.xbill.DNS.ExtendedResolver.send(ExtendedResolver.java:359)
+	at org.apache.james.dnsserver.DNSServer.rawDNSLookup(DNSServer.java:337)
+	at org.apache.james.dnsserver.DNSServer.lookup(DNSServer.java:291)
+	at org.apache.james.dnsserver.DNSServer.findMXRecords(DNSServer.java:249)
+	at org.apache.james.dnsserver.DNSServer$1.<init>(DNSServer.java:427)
+	at org.apache.james.dnsserver.DNSServer.getSMTPHostAddresses(DNSServer.java:426)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy0.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.James.getSMTPHostAddresses(James.java:860)
+	at sun.reflect.GeneratedMethodAccessor12.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.avalon.phoenix.components.application.BlockInvocationHandler.invoke(BlockInvocationHandler.java:134)
+	at $Proxy9.getSMTPHostAddresses(Unknown Source)
+	at org.apache.james.transport.mailets.RemoteDelivery.deliver(RemoteDelivery.java:452)
+	at org.apache.james.transport.mailets.RemoteDelivery.run(RemoteDelivery.java:1139)
+	at java.lang.Thread.run(Thread.java:619)
+22/11/10 22:40:52 INFO  dnsserver: Couldn't find CNAME records for domain test.com.
+22/11/10 22:40:52 ERROR dnsserver: Couldn't resolve IP address for host test.com.

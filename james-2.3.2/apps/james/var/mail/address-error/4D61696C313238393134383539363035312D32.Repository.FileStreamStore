@@ -1,0 +1,17 @@
+Received: from 127.0.0.1 ([127.0.0.1])
+          by UltimaWeapon (JAMES SMTP Server 2.3.2) with SMTP ID 424
+          for <1@localhost>;
+          Sun, 7 Nov 2010 11:49:56 -0500 (EST)
+Date: Sun, 7 Nov 2010 11:49:56 -0500 (EST)
+From: admin@localhost
+To: 1
+Message-ID: <22401955.21289148596039.JavaMail.admin@localhost>
+Subject: Kanban Taskboard - User Registration
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi 1!
+
+You have registered - now go sign in!
+

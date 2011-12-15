@@ -1,0 +1,9 @@
+10/11/10 14:17:13 INFO  James.Mailet: RemoteAddrNotInNetwork: Authorized addresses: [127.0.0.1/255.255.255.255]
+10/11/10 14:17:13 INFO  James.Mailet: RemoteDelivery: maxRetries is larger than total number of attempts specified. Increasing last delayTime with 19 attempts 
+10/11/10 14:17:13 INFO  James.Mailet: RemoteDelivery: Delay of 21600000 msecs is now attempted: 20 times
+10/11/10 14:18:59 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1289416738749-0-to-rit.edu to host mxgate03.rit.edu. at 129.21.3.40 for addresses [acb1485@rit.edu]
+10/11/10 14:18:59 INFO  James.Mailet: RemoteDelivery: Permanent exception delivering mail (Mail1289416738749-0-to-rit.edu: 
+10/11/10 14:18:59 INFO  James.Mailet: ToRepository: Storing mail Mail1289416738749-0-to-rit.edu-!748985 in file://var/mail/address-error/
+10/11/10 14:22:33 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1289416953592-1-to-rit.edu to host mxgate02.rit.edu. at 129.21.3.39 for addresses [acb1485@rit.edu]
+10/11/10 14:22:33 INFO  James.Mailet: RemoteDelivery: Permanent exception delivering mail (Mail1289416953592-1-to-rit.edu: 
+10/11/10 14:22:33 INFO  James.Mailet: ToRepository: Storing mail Mail1289416953592-1-to-rit.edu-!1026755 in file://var/mail/address-error/

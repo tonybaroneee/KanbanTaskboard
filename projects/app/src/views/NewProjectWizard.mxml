@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:views="views.*" 
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" 
+		 xmlns:services="services.*" width="656" height="430">
+	
+	<fx:Script>
+		<![CDATA[
+			import events.ProjectEvent;
+			import events.UserEvent;
+			
+			import flash.text.engine.FontWeight;
+			
+			import mx.controls.Alert;
+			import mx.controls.Text;
+			import mx.controls.sliderClasses.Slider;
+			import mx.events.CloseEvent;
+			import mx.events.ColorPickerEvent;
+			import mx.events.SliderEvent;
+			import mx.events.ValidationResultEvent;
+			import mx.states.State;
+			
+			import renderers.CustomItemRenderer;
+			
+			import services.KanbanService;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			import valueObjects.ProjectData;
+			
+			[Bindable]
+			private var userEmailList:ArrayCollection = new ArrayCollection();
+			
+			private var exampleFontSizeDefault:int = 12;
+			
+			private var stateReached:int = 1;
+			
+			public function resetAllFieldButton_clickHandler(event:MouseEvent, fromCancel:Boolean=false):void
+			{
+				if (currentState == 'generalInfo' || fromCancel) {
+					// reset general info
+					projectNameInput.text = "";
+					companyInput.text = "";
+					managerInput.text = "";
+					developerInput.text = "";
+					startDateInput.text = "";
+					endDateInput.text = "";
+				}
+				if (currentState == 'postItNotes' || fromCancel && (stateReached >= 2)) {
+					// reset post-it note options and sample label
+					fontdropdown.selectedIndex = 0;
+					styledropdown.selectedIndex = 0;
+					fontSizeStepper.value = 12;
+					fontcolorpicker.selectedIndex = 0;
+					sampleTaskLabel.setStyle('fontFamily', 'Arial');
+					sampleTaskLabel.setStyle('fontStyle', 'normal');
+					sampleTaskLabel.setStyle('fontWeight', 'normal');
+					sampleTaskLabel.setStyle('fontSize', exampleFontSizeDefault);
+					sampleTaskLabel.setStyle('color', 0);
+				}
+				if (currentState == 'stages' || fromCancel && (stateReached >= 3)) {
+					// clear all stage name text
+					c3input.text = '';
+					c2input.text = '';
+					c1input.text = '';
+					c1form.visible = true;
+					c2form.visible = true;
+					c3form.visible = true;
+					c4form.visible = false;
+					c4input.text = '';
+					c5form.visible = false;
+					c5input.text = '';
+					c6form.visible = false;
+					c6input.text = '';
+					c7form.visible = false;
+					c7input.text = '';
+					numStagesSlider.value = 3;
+				}
+				if (currentState == 'users' || fromCancel && (stateReached >= 4)) {
+					// clear all team member email addresses
+					userEmailInput.text = '';
+					userEmailInput.errorString = '';
+					message.text = '';
+					userEmailList.removeAll();
+				}
+			}
+			
+			private function cancelcreation(): void 
+			{
+				Alert.show("Are you sure you want to cancel creation?", "",
+					Alert.YES|Alert.NO,
+					null,
+					alrt_closeHandler);
+			}
+			
+			protected function alrt_closeHandler(evt:CloseEvent):void {
+				var lst:List = owner as List;
+				switch (evt.detail) {
+					case Alert.OK:
+					case Alert.YES:
+						resetAllFieldButton_clickHandler(null, true);
+						dispatchEvent(new ProjectEvent(ProjectEvent.CANCELCREATION));
+						break;
+					case Alert.NO:
+					case Alert.CANCEL:
+						break;
+					default:
+						break;
+				}
+			}
+			
+			private function submitCreation():void
+			{
+				var project:ProjectData = new ProjectData();
+				var success:Boolean = true;
+				
+				project.name = projectNameInput.text;
+				project.company = companyInput.text;
+				project.manager = managerInput.text;
+				project.developer = developerInput.text;
+				project.startDate = startDateInput.selectedDate == null ? '' : startDateInput.selectedDate.toDateString();
+				project.endDate = endDateInput.selectedDate == null ? '' : endDateInput.selectedDate.toDateString();
+				project.users = userEmailList.source;
+				
+				switch (fontdropdown.selectedIndex) {
+					case 0:
+						project.postitFont = 'Arial';
+						break;
+					case 1:
+						project.postitFont = 'Times New Roman';
+						break;
+					case 2:
+						project.postitFont = 'Courier New';
+						break;
+					case 3:
+						project.postitFont = 'Georgia';
+						break;
+					case 4:
+						project.postitFont = 'Verdana';
+				}
+				
+				switch (styledropdown.selectedIndex) {
+					case 0:
+						project.postitStyle = 'normal';
+						project.postitWeight = 'normal';
+						break;
+					case 1:
+						project.postitStyle = 'italic';
+						project.postitWeight = 'normal';
+						break;
+					case 2:
+						project.postitStyle = 'normal';
+						project.postitWeight = 'bold';
+						break;
+					case 3:
+						project.postitStyle = 'italic';
+						project.postitWeight = 'bold';
+				}
+				
+				project.postitSize = Number(fontSizeStepper.value);
+				project.postitColor = fontcolorpicker.selectedColor;
+				
+				project.numColumns = numStagesSlider.value;
+				
+				project.colName7 = c7input.text;
+				project.colName6 = c6input.text;
+				project.colName5 = c5input.text;
+				project.colName4 = c4input.text;
+				project.colName3 = c3input.text;
+				project.colName2 = c2input.text;
+				project.colName1 = c1input.text;
+				
+				dispatchEvent(new ProjectEvent(ProjectEvent.SUBMITCREATION, project));
+			}
+			
+			protected function dropdownlist1_changeHandler(event:IndexChangeEvent):void
+			{
+				switch (fontdropdown.selectedIndex) {
+					case 0:
+						sampleTaskLabel.setStyle('fontFamily', 'Arial');
+						break;
+					case 1:
+						sampleTaskLabel.setStyle('fontFamily', 'Times New Roman');
+						break;
+					case 2:
+						sampleTaskLabel.setStyle('fontFamily', 'Courier New');
+						break;
+					case 3:
+						sampleTaskLabel.setStyle('fontFamily', 'Georgia');
+						break;
+					case 4:
+						sampleTaskLabel.setStyle('fontFamily', 'Verdana');
+				}
+			}
+			
+			
+			protected function styledropdown_changeHandler(event:IndexChangeEvent):void
+			{
+				switch (styledropdown.selectedIndex) {
+					case 0:
+						sampleTaskLabel.setStyle('fontStyle', 'normal');
+						sampleTaskLabel.setStyle('fontWeight', 'normal');
+						break;
+					case 1:
+						sampleTaskLabel.setStyle('fontWeight', 'normal');
+						sampleTaskLabel.setStyle('fontStyle', 'italic');
+						break;
+					case 2:
+						sampleTaskLabel.setStyle('fontStyle', 'normal');
+						sampleTaskLabel.setStyle('fontWeight', 'bold');
+						break;
+					case 3:
+						sampleTaskLabel.setStyle('fontStyle', 'italic');
+						sampleTaskLabel.setStyle('fontWeight', 'bold');
+				}
+			}
+			
+			
+			protected function numericstepper1_changeHandler(event:Event):void
+			{
+				sampleTaskLabel.setStyle('fontSize', Number(fontSizeStepper.value));
+			}
+			
+			
+			protected function colorpicker1_changeHandler(event:ColorPickerEvent):void
+			{
+				sampleTaskLabel.setStyle('color', fontcolorpicker.selectedColor);
+			}
+			
+			protected function emailValidator_valid(evt:ValidationResultEvent):void {
+				message.text = "";
+				userEmailList.addItem(userEmailInput.text);				
+				userEmailInput.text = '';
+			}
+			
+			protected function emailValidator_invalid(evt:ValidationResultEvent):void {
+				message.text = evt.message;
+			}
+
+			protected function nextButton_clickHandler(event:MouseEvent):void
+			{
+				switch (this.currentState) {
+					case 'generalInfo':
+						currentState = 'postItNotes';
+						if (stateReached > 2) {
+							// dont set back to two, keep at max state reached
+						} else {
+							stateReached = 2;
+						}
+						break;
+					case 'postItNotes':
+						currentState = 'stages';
+						if (stateReached > 3) {
+							// dont set back to three, keep at max state reached
+						} else {
+							stateReached = 3;
+						}
+						break;
+					case 'stages':
+						var success:Boolean = true;
+						switch (numStagesSlider.value) {
+							case 2:
+								if (c2input.text == '' || c1input.text == '') {
+									success = false;
+								}
+								break;
+							case 3:
+								if (c3input.text == '' || c2input.text == '' || c1input.text == '') {
+									success = false;
+								}
+								break;
+							case 4:
+								if (c4input.text == '' || c3input.text == '' || c2input.text == '' || 
+									c1input.text == '') {
+									success = false;
+								}
+								break;
+							case 5:
+								if (c5input.text == '' || c4input.text == '' || c3input.text == '' || 
+									c2input.text == '' || c1input.text == '') {
+									success = false;
+								}
+								break;
+							case 6:
+								if (c6input.text == '' || c5input.text == '' || c4input.text == '' || 
+									c3input.text == '' || c2input.text == '' || c1input.text == '') {
+									success = false;
+								}
+								break;
+							case 7:
+								if (c7input.text == '' || c6input.text == '' || c5input.text == '' || 
+									c4input.text == '' || c3input.text == '' || 
+									c2input.text == '' || c1input.text == '') {
+									success = false;
+								}
+								break;
+						}
+						if (success) {
+							stageNameAlert.text = "";
+							currentState = 'users';
+							if (stateReached > 4) {
+								// dont set back to four, keep at max state reached
+							} else {
+								stateReached = 4;
+							}
+						} else {
+							stageNameAlert.text = "One or more stages missing name.";
+						}
+						break;
+					case 'users':
+						currentState = 'summary';
+						if (stateReached > 5) {
+							// dont set back to five, keep at max state reached
+						} else {
+							stateReached = 5;
+						}
+						if (summaryText) {
+							fillSummaryText();
+						}
+						break;
+					case 'summary':
+						submitCreation();
+						break;
+				}
+			}
+			
+			protected function backButton_clickHandler(event:MouseEvent):void
+			{
+				switch (this.currentState) {
+					case 'postItNotes':
+						currentState = 'generalInfo';
+						break;
+					case 'stages':
+						stageNameAlert.text = "";
+						currentState = 'postItNotes';
+						break;
+					case 'users':
+						currentState = 'stages';
+						break;
+					case 'summary':
+						currentState = 'users';
+						break;
+				}
+			}
+
+			protected function fillSummaryText():void
+			{
+				summaryText.text = "";
+				var stringBuilder:String = "";
+				stringBuilder = stringBuilder.concat("General Information" + "\n" + "-----" + "\n");
+				stringBuilder = stringBuilder.concat("\tProject Name: ");
+				if (projectNameInput.text == "") {
+					stringBuilder = stringBuilder.concat("(Not specified)\n");
+				} else {
+					stringBuilder = stringBuilder.concat(projectNameInput.text + "\n");
+				}
+				
+				stringBuilder = stringBuilder.concat("\tCompany: ");
+				if (companyInput.text == "") {
+					stringBuilder = stringBuilder.concat("(Not specified)\n");
+				} else {
+					stringBuilder = stringBuilder.concat(companyInput.text + "\n");
+				}
+				
+				stringBuilder = stringBuilder.concat("\tLead Manager: ");
+				if (managerInput.text == "") {
+					stringBuilder = stringBuilder.concat("(Not specified)\n");
+				} else {
+					stringBuilder = stringBuilder.concat(managerInput.text + "\n");
+				}
+				
+				stringBuilder = stringBuilder.concat("\tLead Developer: ");
+				if (developerInput.text == "") {
+					stringBuilder = stringBuilder.concat("(Not specified)\n");
+				} else {
+					stringBuilder = stringBuilder.concat(developerInput.text + "\n");
+				}
+				stringBuilder = stringBuilder.concat("\tStart Date: ");
+				if (startDateInput.selectedDate == null) {
+					stringBuilder = stringBuilder.concat("(Not specified)\n");
+				} else {
+					stringBuilder = stringBuilder.concat(startDateInput.selectedDate.toDateString() + "\n");
+				}
+				stringBuilder = stringBuilder.concat("\tProjected End Date: ");
+				if (endDateInput.selectedDate == null) {
+					stringBuilder = stringBuilder.concat("(Not specified)\n\n");
+				} else {
+					stringBuilder = stringBuilder.concat(endDateInput.selectedDate.toDateString() + "\n\n");
+				}
+				
+				stringBuilder = stringBuilder.concat("Post-it Options" + "\n" + "-----" + "\n");
+				stringBuilder = stringBuilder.concat("\tFont: " + fontdropdown.selectedItem + "\n");
+				switch (styledropdown.selectedIndex) {
+					case 0:
+						stringBuilder = stringBuilder.concat("\tStyle: Normal\n");
+						stringBuilder = stringBuilder.concat("\tWeight: Normal\n");
+						break;
+					case 1:
+						stringBuilder = stringBuilder.concat("\tStyle: Italic\n");
+						stringBuilder = stringBuilder.concat("\tWeight: Normal\n");
+						break;
+					case 2:
+						stringBuilder = stringBuilder.concat("\tStyle: Normal\n");
+						stringBuilder = stringBuilder.concat("\tWeight: Bold\n");
+						break;
+					case 3:
+						stringBuilder = stringBuilder.concat("\tStyle: Italic\n");
+						stringBuilder = stringBuilder.concat("\tWeight: Bold\n");
+				}
+				stringBuilder = stringBuilder.concat("\tSize: " + Number(fontSizeStepper.value) + "\n");
+				//stringBuilder = stringBuilder.concat("\tColor: " + fontcolorpicker.selectedColor + "\n\n");
+				
+				stringBuilder = stringBuilder.concat("Stages" + "\n" + "-----" + "\n");
+				stringBuilder = stringBuilder.concat("\tNumber of Stages: " + numStagesSlider.value + "\n");
+				switch(numStagesSlider.value) {
+					case 2:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n\n");
+						break;
+					case 3:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 3: " + c3input.text + "\n\n");
+						break;
+					case 4:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 3: " + c3input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 4: " + c4input.text + "\n\n");
+						break;
+					case 5:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 3: " + c3input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 4: " + c4input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 5: " + c5input.text + "\n\n");
+						break;
+					case 6:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 3: " + c3input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 4: " + c4input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 5: " + c5input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 6: " + c6input.text + "\n\n");
+						break;
+					case 7:
+						stringBuilder = stringBuilder.concat("\tStage 1: " + c1input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 2: " + c2input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 3: " + c3input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 4: " + c4input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 5: " + c5input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 6: " + c6input.text + "\n");
+						stringBuilder = stringBuilder.concat("\tStage 7: " + c7input.text + "\n\n");
+						break;
+				}
+				stringBuilder = stringBuilder.concat("Users" + "\n" + "-----" + "\n");
+				for (var i:int = 0; i < userEmailList.length; i++) {
+					stringBuilder = stringBuilder.concat("\t" + userEmailList.getItemAt(i) + "\n");
+				}				
+				summaryText.text = stringBuilder;
+			}
+			
+			private function myDataTipFunc(val:String):String {
+				// this is a fix to make data tip be integer values, not floats (3 vs. 3.00)
+				return val;
+			}
+			
+			protected function sliderChangeLive(event:SliderEvent):void {
+				var currentSlider:Slider=Slider(event.currentTarget);
+				switch (currentSlider.value) {
+					case 2:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = false;
+						c3input.text = '';
+						c4form.visible = false;
+						c4input.text = '';
+						c5form.visible = false;
+						c5input.text = '';
+						c6form.visible = false;
+						c6input.text = '';
+						c7form.visible = false;
+						c7input.text = '';
+						break;
+					case 3:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = true;
+						c4form.visible = false;
+						c4input.text = '';
+						c5form.visible = false;
+						c5input.text = '';
+						c6form.visible = false;
+						c6input.text = '';
+						c7form.visible = false;
+						c7input.text = '';
+						break;
+					case 4:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = true;
+						c4form.visible = true;
+						c5form.visible = false;
+						c5input.text = '';
+						c6form.visible = false;
+						c6input.text = '';
+						c7form.visible = false;
+						c7input.text = '';
+						break;
+					case 5:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = true;
+						c4form.visible = true;
+						c5form.visible = true;
+						c6form.visible = false;
+						c6input.text = '';
+						c7form.visible = false;
+						c7input.text = '';
+						break;
+					case 6:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = true;
+						c4form.visible = true;
+						c5form.visible = true;
+						c6form.visible = true;
+						c7form.visible = false;
+						c7input.text = '';
+						break;
+					case 7:
+						c1form.visible = true;
+						c2form.visible = true;
+						c3form.visible = true;
+						c4form.visible = true;
+						c5form.visible = true;
+						c6form.visible = true;
+						c7form.visible = true;
+						break;
+				}
+			}
+
+
+			protected function chooseTemplateButton_clickHandler(event:MouseEvent):void
+			{
+				dispatchEvent(new ProjectEvent(ProjectEvent.OPENTEMPLATES));
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:EmailValidator id="emailValidator" 
+						   valid="emailValidator_valid(event);"
+						   invalid="emailValidator_invalid(event);"/>
+	</fx:Declarations>
+	
+	<s:states>
+		<s:State name="generalInfo"/>
+		<s:State name="postItNotes"/>
+		<s:State name="stages"/>
+		<s:State name="users"/>
+		<s:State name="summary"/>
+	</s:states>
+	
+	<mx:Image x="0" y="0" source="assets/wizard.jpg" width="170" height="430"/>
+	<s:Label x="38" y="21" text="General Information" color="#004790" textDecoration.generalInfo="none" fontWeight.generalInfo="bold" 
+			 fontStyle.generalInfo="normal" fontFamily.generalInfo="Arial" color.generalInfo="#000000"/>
+	<s:Label x="38" y="41" text="Post-it Options" textDecoration.postItNotes="none" fontFamily.postItNotes="Arial" 
+			 fontStyle.postItNotes="normal" fontWeight.postItNotes="bold" color.postItNotes="#000000" color="#004790"/>
+	<s:Label x="38" y="61" text="Stages" color="#004790" textDecoration.stages="none" fontFamily.stages="Arial" fontWeight.stages="bold" 
+			 color.stages="#000000"/>
+	<s:Label x="38" y="81" color="#004790" text="Team Members" textDecoration.users="none" fontFamily.users="Arial" 
+			 fontWeight.users="bold" color.users="#000000"/>
+	<s:Label x="38" y="101" text="Summary" color="#004790" textDecoration.summary="none" fontFamily.summary="Arial" 
+			 fontWeight.summary="bold" color.summary="#000000"/>
+	<mx:VRule x="170" y="1" height="429" includeIn="postItNotes,stages,summary,users"/>
+	<s:TextArea width="162" height="52" text="Project Creation&#xd;Wizard" fontSize="18" borderVisible="false" fontWeight="bold" verticalAlign="middle" textAlign="center" contentBackgroundAlpha="0.0" x="3" y="167"/>
+	<mx:Image includeIn="generalInfo,postItNotes,stages,users,summary" x="16" y="18" width="16" height="16" source="assets/square.png"/>
+	<mx:Image x="16" y="38" width="16" height="16" source="assets/square.png" includeIn="postItNotes,stages,users,summary"/>
+	<mx:Image x="16" y="58" width="16" height="16" source="assets/square.png" includeIn="stages,users,summary"/>
+	<mx:Image x="16" y="78" width="16" height="16" source="assets/square.png" includeIn="users,summary"/>
+	<mx:Image x="16" y="98" width="16" height="16" source="assets/square.png" includeIn="summary"/>
+	<mx:Image source="assets/black_line.png" includeIn="postItNotes,stages,users,summary" x="23" y="29" height="14" width="2"/>
+	<mx:Image source="assets/black_line.png" x="23" y="49" height="14" width="2" includeIn="stages,users,summary"/>
+	<mx:Image source="assets/black_line.png" x="23" y="69" height="14" width="2" includeIn="users,summary"/>
+	<mx:Image source="assets/black_line.png" x="23" y="89" height="14" width="2" includeIn="summary"/>
+	<s:BorderContainer x="170" y="0" width="486" height="430" dropShadowVisible="false" cornerRadius="0" borderWeight="1" borderVisible="true" borderAlpha="0.34">
+		<mx:ViewStack x="26" y="72" id="viewstack1" width="424" height="297">
+			<s:NavigatorContent includeIn="generalInfo" label="General Information" width="100%" height="100%">
+				<mx:Form width="404" height="141" x="10" y="36">
+					<mx:FormItem label="Project Name" horizontalAlign="center">
+						<s:TextInput width="200" x="102" id="projectNameInput"  maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem label="Company">
+						<s:TextInput width="200" id="companyInput" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem label="Project Manager">
+						<s:TextInput width="200" id="managerInput" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem label="Lead Developer">
+						<s:TextInput width="200" id="developerInput" maxChars="30"/>
+					</mx:FormItem>
+				</mx:Form>
+				<mx:Form width="258" height="85" x="-6" y="206">
+					<mx:FormItem label="Start Date">
+						<mx:DateField width="95" id="startDateInput" showToday="true"/>
+					</mx:FormItem>
+					<mx:FormItem label="Projected End Date">
+						<mx:DateField width="95" id="endDateInput"/>
+					</mx:FormItem>
+				</mx:Form>
+				<s:Label x="12" y="14" text="General Information" width="192" height="22" fontSize="15"/>
+				<s:Label x="12" y="184" text="Project Dates" width="192" height="22" fontSize="15"/>
+				<mx:Image source="assets/Edit-Text-icon.png" width="24" height="24" x="146" y="8"/>
+				<mx:Image includeIn="generalInfo" x="106" y="178" width="22" height="22" source="assets/calendar-date-icon.png"/>
+				<mx:HRule x="13" y="200" width="82"/>
+				<mx:HRule x="15" y="30" width="122"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent includeIn="postItNotes" label="Post-it Notes" width="100%" height="100%">
+				<s:DropDownList id="styledropdown" x="162" y="97" selectedIndex="0" color="#000000" change="styledropdown_changeHandler(event)" 
+					contentBackgroundAlpha="1.0" contentBackgroundColor="#FFFFFF">
+					
+					<mx:ArrayCollection>
+						<fx:String>Normal</fx:String>
+						<fx:String>Italic</fx:String>
+						<fx:String>Bold</fx:String>
+						<fx:String>Bold Italic</fx:String>
+					</mx:ArrayCollection>
+				</s:DropDownList>
+				<s:DropDownList id="fontdropdown" dropShadowVisible="true" x="16" y="97"
+					selectedIndex="0" fontWeight="normal" color="#000000" width="138" change="dropdownlist1_changeHandler(event)" 
+					contentBackgroundAlpha="1.0" contentBackgroundColor="#FFFFFF">
+					
+					<mx:ArrayCollection>
+						<fx:String>Arial</fx:String>
+						<fx:String>Times New Roman</fx:String>
+						<fx:String>Courier New</fx:String>
+						<fx:String>Georgia</fx:String>
+						<fx:String>Verdana</fx:String>
+					</mx:ArrayCollection>
+					
+				</s:DropDownList>
+				<mx:FormItem label="Font" x="67" y="75">
+				</mx:FormItem>
+				<mx:FormItem label="Style" x="198" y="75">
+				</mx:FormItem>
+				<mx:FormItem label="Size" x="297" y="75">
+				</mx:FormItem>
+				<mx:FormItem label="Font Color" horizontalAlign="left" x="353" y="75">
+				</mx:FormItem>
+				<s:NumericStepper id="fontSizeStepper" value="12" minimum="8" maximum="24" stepSize="2" x="286" y="96" change="numericstepper1_changeHandler(event)" contentBackgroundAlpha="0.0"/>
+				<mx:ColorPicker id="fontcolorpicker" x="374" y="96" change="colorpicker1_changeHandler(event)" contentBackgroundAlpha="1.0"/>
+				<mx:Image source="assets/post-it-larger.png" x="171" y="135"/>
+				<s:TextArea selectable="false" id="sampleTaskLabel" paddingLeft="5" paddingTop="5" paddingBottom="25" 
+							paddingRight="5" text="Sample Task Here" borderVisible="false" 
+							contentBackgroundAlpha="0.0" fontFamily="Arial" editable="false" x="171" y="135" width="98" height="103"/>
+				<mx:Image x="108" y="3" source="assets/Misc-Easel-2-icon.png"/>
+				<s:Label x="12" y="14" text="Post-it Options" width="101" height="22" fontSize="15"/>
+				<mx:HRule x="13" y="30" width="92"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent includeIn="stages" label="Stages" width="100%" height="100%">
+				<s:Label x="12" y="14" text="Stage Layout" width="101" height="22" fontSize="15"/>
+				<mx:Form width="343" height="231" x="41" y="76">
+					<mx:FormItem id="c1form" label="Stage #1:" borderVisible="true" dropShadowVisible="false">
+						<s:TextInput width="200" id="c1input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c2form" label="Stage #2:" borderVisible="true" dropShadowVisible="false">
+						<s:TextInput width="200" id="c2input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c3form" label="Stage #3:" borderVisible="true" dropShadowVisible="false">
+						<s:TextInput width="200" id="c3input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c4form" label="Stage #4:" borderVisible="true" dropShadowVisible="false" visible="false">
+						<s:TextInput width="200" id="c4input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c5form" label="Stage #5:" borderVisible="true" dropShadowVisible="false" visible="false">
+						<s:TextInput width="200" id="c5input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c6form" label="Stage #6:" borderVisible="true" dropShadowVisible="false" visible="false">
+						<s:TextInput width="200" id="c6input" maxChars="30"/>
+					</mx:FormItem>
+					<mx:FormItem id="c7form" label="Stage #7:" borderVisible="true" dropShadowVisible="false" visible="false">
+						<s:TextInput width="200" id="c7input" maxChars="30"/>
+					</mx:FormItem>
+				</mx:Form>
+				<mx:Image source="assets/stages - Copy.png" y="2" width="106" height="67" x="312" scaleContent="false"/>
+				<s:Label x="41" y="42" text="Number of Stages:" width="100"/>
+				<mx:HRule x="13" y="31" width="82"/>
+				<mx:HSlider id="numStagesSlider" change="sliderChangeLive(event);" x="148" y="28" tickInterval="1" 
+							height="32" minimum="2" maximum="7" snapInterval="1" value="3" labels="[2,7]"
+							liveDragging="true" dataTipFormatFunction="myDataTipFunc" width="132"/>
+				<s:Label id="stageNameAlert" x="125" y="70" width="182" color="#EE0000"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent includeIn="users" label="Users" width="100%" height="100%">
+				<s:Button id="addUserButton" label="Add" click="emailValidator.validate(userEmailInput.text)" x="331" y="69"/>
+				<mx:FormItem label="E-mail Address:" borderVisible="true" dropShadowVisible="false" width="302" x="21" y="69">
+					<s:TextInput width="200" id="userEmailInput" maxChars="30"/>
+				</mx:FormItem>
+				<s:List id="userList" width="199" height="139" dataProvider="{userEmailList}" itemRenderer="renderers.CustomItemRenderer" x="124" y="117"/>
+				<mx:Image source="assets/user-group-icon.png" x="119" y="4"/>
+				<s:Label id="message" verticalAlign="middle" color="#FF0000" x="125" y="97"/>
+				<s:Label x="12" y="14" text="Team Members" width="101" height="22" fontSize="15"/>
+				<mx:HRule x="13" y="30" width="96"/>
+			</s:NavigatorContent>
+			<s:NavigatorContent id="summary" label="Summary" width="100%" height="100%" includeIn="summary">
+				<s:TextArea id="summaryText" creationComplete="fillSummaryText()" x="10" y="10" width="404" height="277" editable="false"/>
+			</s:NavigatorContent>
+		</mx:ViewStack>
+		<mx:HRule x="25" y="381" width="425"/>
+		<s:Button x="380" y="392" id="nextButton" label="Next" click="nextButton_clickHandler(event)" label.summary="Finish"/>
+		<s:Button x="300" y="392" id="backButton" label="Back" click="backButton_clickHandler(event)" enabled.generalInfo="false"/>
+		<s:Button x="30" y="392" id="cancelButton" label="Cancel" click="cancelcreation()"/>
+		<s:Button x="117" y="392" id="resetAllFieldButton" label="Reset All Fields" click="resetAllFieldButton_clickHandler(event)" enabled.summary="false"/>
+		<s:Panel title="Create a New Project" dropShadowVisible="false" borderColor="#6D6D6D" width="486" x="-1" height="63" y="-1">
+			<s:Label x="27" y="9" fontSize="12" text.generalInfo="Fill in the general deatils about your project, then click 'Next'." 
+					 text.postItNotes="Customize the look of your post-it notes, then click 'Next'." text.stages="Specify the number and names of your project's stages, then click 'Next'." 
+					 text.users="Specify any team members whom you wish to access your project, then click 'Next'." text.summary="Review the results, and click 'Finish'."/>
+		</s:Panel>
+		<mx:LinkButton includeIn="stages" x="368" y="333" label="Templates..." id="chooseTemplateButton" click="chooseTemplateButton_clickHandler(event)"/>
+	</s:BorderContainer>
+	
+</s:Group>

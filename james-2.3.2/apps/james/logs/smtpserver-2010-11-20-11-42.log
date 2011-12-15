@@ -1,0 +1,26 @@
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service uses default thread group.
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service is running on: UltimaWeapon
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service handler hello name is: UltimaWeapon
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service handler connection timeout is: 360000
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service connection backlog is: 5
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service will allow a maximum of 30 connections.
+20/11/10 11:42:45 INFO  smtpserver: This SMTP server does not require authentication.
+20/11/10 11:42:45 INFO  smtpserver: Authorized addresses: [127.0.0.0/255.0.0.0]
+20/11/10 11:42:45 INFO  smtpserver: No maximum message size is enforced for this server.
+20/11/10 11:42:45 INFO  smtpserver: The idle timeout will be reset every 20480 bytes.
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.VrfyCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.AuthCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.QuitCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.HelpCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.HeloCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.MailCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.DataCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.RcptCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.EhloCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added MessageHandler: org.apache.james.smtpserver.SendMailHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.NoopCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.ExpnCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: Added Commandhandler: org.apache.james.smtpserver.RsetCmdHandler
+20/11/10 11:42:45 INFO  smtpserver: SMTP Service started plain:25
+20/11/10 11:43:36 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+20/11/10 11:43:36 INFO  smtpserver: Successfully spooled mail Mail1290271416724-0 from admin@localhost on 127.0.0.1 for [test@test.com]

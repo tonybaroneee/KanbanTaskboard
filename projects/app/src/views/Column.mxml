@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Panel xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="333" height="625" fontSize="16" fontWeight="bold"
+		 dragEnter="dragEnterHandler(event);" dragDrop="dragDropHandler(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import events.TaskEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.core.DragSource;
+			import mx.events.DragEvent;
+			import mx.managers.DragManager;
+			
+			import skins.AddTaskButtonSkin;
+			
+			import valueObjects.Project;
+			import valueObjects.Stage;
+			import valueObjects.TaskData;
+			
+			public var currentNumTasks:int = 0;
+			public var column:valueObjects.Stage;
+			private var tasks:ArrayCollection = new ArrayCollection();
+			
+			private function dragEnterHandler(e:DragEvent):void {
+				DragManager.acceptDragDrop(e.currentTarget as Column);
+			}
+			
+			private function dragDropHandler(e:DragEvent):void {
+				if (currentNumTasks == 8) {
+					Alert.show('Destination column is full.');
+					
+				} else {
+					var newTask:Task = e.dragInitiator.parent as Task;
+					
+					if (e.currentTarget == newTask.sourceColumn) {
+						// do nothing since task was dragged to same column
+					} else {
+						currentNumTasks++;
+						
+						if (currentNumTasks % 2 == 1)
+						{
+							// task added is odd
+							newTask.x = 21;
+							newTask.y = 10 + 146*((int)((currentNumTasks-1) / 2));
+							
+						} else {
+							// task added is even
+							newTask.x = 175;
+							newTask.y = 10 + 146*((int)((currentNumTasks-1) / 2));
+						}
+						tasks.addItem(newTask);
+						e.currentTarget.addElement(newTask);
+						newTask.sourceColumn.remove(newTask, true);
+						newTask.task.stageId = this.column.id;
+						
+						var te:TaskEvent = new TaskEvent(TaskEvent.SAVE_TASK);
+						te.fullTask = newTask.task;
+						dispatchEvent(te);
+						
+					}
+				}
+			}
+			
+			public function remove(aTask:Task,fromDrag:Boolean):void
+			{
+				var index:int = tasks.getItemIndex(aTask);
+				var i:int;
+				var tempTask:Task;
+				
+				// Check if source was from delete button, if so, remove element
+				if (!fromDrag) {
+					// Visually remove the task
+					this.removeElementAt(this.getElementIndex(aTask as Task));
+				}
+				
+				if (index+1 == currentNumTasks) {
+					// No shifting necessary
+				} else {
+					
+					// Iterate through proceeding tasks and shift them all back one spot
+					for (i = index+1; i < currentNumTasks; i++)
+					{
+						tempTask = tasks.getItemAt(i) as Task;
+						this.removeElementAt(this.getElementIndex(tempTask as Task));
+						// Positioning algorithm
+						if (i % 2 == 1)
+						{
+							// task is at odd index
+							tempTask.x = 21;
+							tempTask.y = 10 + 146*((int)((i-1) / 2));
+							
+						} else {
+							// task is at even index
+							tempTask.x = 175;
+							tempTask.y = 10 + 146*((int)((i-1) / 2));
+						}
+						this.addElement(tempTask);	
+					}
+				}
+				
+				// Remove the task from array collection
+				tasks.removeItemAt(index);
+				currentNumTasks--;
+			}
+			
+			public function addTask(taskData:valueObjects.Task, project:valueObjects.Project):void
+			{
+				var newTask:Task = new Task;
+				newTask.task = taskData;
+				currentNumTasks++;
+				
+				// Positioning algorithm
+				if (currentNumTasks % 2 == 1)
+				{
+					// task added is odd
+					newTask.x = 21;
+					newTask.y = 10 + 146*((int)((currentNumTasks-1) / 2));
+					
+				} else {
+					// task added is even
+					newTask.x = 175;
+					newTask.y = 10 + 146*((int)((currentNumTasks-1) / 2));
+				}
+				
+				newTask.taskDescription.text = taskData.desc;
+				
+				newTask.taskDescription.setStyle('color', project.workspace.postitColor);
+				newTask.taskDescription.setStyle('fontSize', project.workspace.postitSize);
+				newTask.taskDescription.setStyle('fontStyle', project.workspace.postitStyle);
+				newTask.taskDescription.setStyle('fontWeight', project.workspace.postitWeight);
+				newTask.taskDescription.setStyle('fontFamily', project.workspace.postitFont);
+				
+				newTask.taskDescriptionEdit.setStyle('color', project.workspace.postitColor);
+				newTask.taskDescriptionEdit.setStyle('fontSize', project.workspace.postitSize);
+				newTask.taskDescriptionEdit.setStyle('fontStyle', project.workspace.postitStyle);
+				newTask.taskDescriptionEdit.setStyle('fontWeight', project.workspace.postitWeight);
+				newTask.taskDescriptionEdit.setStyle('fontFamily', project.workspace.postitFont);
+				
+				tasks.addItem(newTask);
+				this.addElement(newTask);
+			}
+
+			protected function quickaddtask_clickHandler(event:MouseEvent):void
+			{
+				if (currentNumTasks == 8) {
+					Alert.show("Column is full.");
+				} else {
+					dispatchEvent(new TaskEvent(TaskEvent.SUBMIT_TASK, null, null, null, Number(this.id)));
+				}
+			}
+
+		]]>
+	</fx:Script>
+	<s:Button id="quickaddtask" x="304" y="-25" toolTip="Add a Task" 
+			  click="quickaddtask_clickHandler(event)" skinClass="skins.AddTaskButtonSkin" 
+			  width="16" height="16"/>
+	<s:Label x="251" y="-21" fontSize="12" text="Add Task"/>
+</s:Panel>

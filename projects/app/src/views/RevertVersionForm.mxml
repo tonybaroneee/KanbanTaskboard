@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="604" height="464"
+		 creationComplete="init();"
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" horizontalCenter="0" verticalCenter="0" 
+		 close="titlewindow1_closeHandler(event)"
+		 keyDown="titleWindow_keyDown(event);">
+
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			
+			[Bindable]
+			private var currentVersion:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			private var previousVersions:ArrayCollection = new ArrayCollection();
+			
+			
+			private function init():void {
+				this.setFocus();
+			}
+			
+			public function populate(project:Project):void
+			{
+				currentVersion.addItem(project.version);
+				var index:int = project.version;
+				while (index > 0) {
+					previousVersions.addItem(--index);
+				}
+			}
+			
+			protected function list1_changeHandler(event:IndexChangeEvent):void
+			{
+				var selectedVersionNum:int = previousVersions.getItemAt(event.newIndex) as int;
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:Label x="22" y="23" text="Revert to Previous Version" fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="55" width="250"/>
+	<s:List id="currentVersionList" dataProvider="{currentVersion}" x="128" y="83" width="71" height="20" fontFamily="Arial" color="#000000" enabled="false"/>
+	<s:List id="previousVersionsList" change="list1_changeHandler(event)" dataProvider="{previousVersions}" 
+			x="128" y="124" width="71" height="224" color="#000000" fontFamily="Arial"/>
+	<s:Label x="18" y="124" text="Older Version(s):" fontSize="14"/>
+	<s:Label x="19" y="86" text="Current Version:" fontSize="14"/>
+	<s:Panel x="261" y="83" width="305" height="265" title="Version Details">
+		<s:Label x="15" y="46" text="Author:"/>
+		<s:Label x="15" y="16" text="Number:"/>
+		<s:Label x="15" y="76" text="Date:"/>
+		<s:Label x="15" y="106" text="Description:"/>
+		<s:TextInput id="versionBox" editable="false" x="94" y="11" width="69"/>
+		<s:TextInput id="authorField" editable="false" x="94" y="41" width="189"/>
+		<s:TextInput id="dateBox" editable="false" x="94" y="71" width="69"/>
+		<s:TextArea id="descriptionBox" editable="false" x="94" y="101" width="189" height="109"/>
+	</s:Panel>
+	<s:Button x="508" y="385" label="Revert" height="25" click="Alert.show('To be implemented...');"/>
+	<s:Button x="420" y="385" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+	<mx:VRule x="228" y="171" height="129"/>
+</s:TitleWindow>

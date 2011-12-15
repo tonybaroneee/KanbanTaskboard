@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="536" height="342"
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" horizontalCenter="0" verticalCenter="0" close="titlewindow1_closeHandler(event)">
+	
+	<fx:Script>
+		<![CDATA[
+			
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			import mx.controls.Alert;
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+		]]>
+	</fx:Script>
+	
+	<s:Label x="22" y="29" text="Task Subscription | Settings" fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="61" width="250"/>
+	<s:CheckBox x="101" y="123" label="  E-Mail Address"/>
+	<s:CheckBox x="101" y="188" label="  RSS Feed"/>
+	<s:TextInput x="230" y="122" width="253"/>
+	<s:TextInput x="230" y="187" width="253"/>
+	<s:Button x="387" y="263" label="Save Changes" width="97" height="25" click="Alert.show('To be implemented...');"/>
+	<s:Button x="293" y="263" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+	<mx:Image x="33" y="110" source="assets/email_icon.png"/>
+	<mx:Image x="32" y="176" source="assets/rss_notif.png"/>
+</s:TitleWindow>

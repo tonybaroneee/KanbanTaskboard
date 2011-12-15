@@ -1,0 +1,8 @@
+25/02/11 11:59:30 INFO  pop3server: POP3 Service uses default thread group.
+25/02/11 11:59:30 INFO  pop3server: POP3 Service is running on: UltimaWeapon
+25/02/11 11:59:30 INFO  pop3server: POP3 Service handler hello name is: UltimaWeapon
+25/02/11 11:59:30 INFO  pop3server: POP3 Service handler connection timeout is: 120000
+25/02/11 11:59:30 INFO  pop3server: POP3 Service connection backlog is: 5
+25/02/11 11:59:30 INFO  pop3server: POP3 Service will allow a maximum of 30 connections.
+25/02/11 11:59:30 INFO  pop3server: The idle timeout will be reset every 20480 bytes.
+25/02/11 11:59:30 INFO  pop3server: POP3 Service started plain:110

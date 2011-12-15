@@ -1,0 +1,50 @@
+19/11/10 19:34:15 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 19:34:15 INFO  smtpserver: Successfully spooled mail Mail1290213255255-0 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 19:37:14 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 19:37:14 INFO  smtpserver: Successfully spooled mail Mail1290213434183-1 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 19:59:44 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 19:59:44 INFO  smtpserver: Successfully spooled mail Mail1290214784547-2 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 20:47:10 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 20:47:10 INFO  smtpserver: Successfully spooled mail Mail1290217630056-3 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 20:51:52 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 20:51:52 INFO  smtpserver: Successfully spooled mail Mail1290217912742-4 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 20:58:22 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 20:58:22 INFO  smtpserver: Successfully spooled mail Mail1290218302469-5 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:00:55 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:00:55 INFO  smtpserver: Successfully spooled mail Mail1290218455506-6 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:13:49 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:13:49 INFO  smtpserver: Successfully spooled mail Mail1290219229207-7 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:14:42 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:14:42 INFO  smtpserver: Successfully spooled mail Mail1290219282309-8 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:43:02 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:43:02 INFO  smtpserver: Successfully spooled mail Mail1290220982834-9 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:44:16 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:44:16 INFO  smtpserver: Successfully spooled mail Mail1290221056365-10 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:47:50 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:47:50 INFO  smtpserver: Successfully spooled mail Mail1290221270668-11 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:49:07 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:49:07 INFO  smtpserver: Successfully spooled mail Mail1290221347312-12 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:54:16 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:54:16 INFO  smtpserver: Successfully spooled mail Mail1290221656243-13 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 21:56:40 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 21:56:40 INFO  smtpserver: Successfully spooled mail Mail1290221800311-14 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:00:22 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:00:22 INFO  smtpserver: Successfully spooled mail Mail1290222022185-15 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:03:06 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:03:06 INFO  smtpserver: Successfully spooled mail Mail1290222186622-16 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:04:50 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:04:50 INFO  smtpserver: Successfully spooled mail Mail1290222290472-17 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:08:04 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:08:04 INFO  smtpserver: Successfully spooled mail Mail1290222484146-18 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:13:34 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:13:34 INFO  smtpserver: Successfully spooled mail Mail1290222814861-19 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:21:47 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:21:47 INFO  smtpserver: Successfully spooled mail Mail1290223307716-20 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:51:01 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:51:01 INFO  smtpserver: Successfully spooled mail Mail1290225061421-21 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:55:15 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:55:15 INFO  smtpserver: Successfully spooled mail Mail1290225315321-22 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 22:58:33 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 22:58:33 INFO  smtpserver: Successfully spooled mail Mail1290225513464-23 from admin@localhost on 127.0.0.1 for [test@test.com]
+19/11/10 23:23:14 INFO  smtpserver: Connection from activate.adobe.com (127.0.0.1)
+19/11/10 23:23:14 INFO  smtpserver: Successfully spooled mail Mail1290226994766-24 from admin@localhost on 127.0.0.1 for [test@test.com]

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="524" height="378"
+		 creationComplete="init();"
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" horizontalCenter="0" verticalCenter="0" 
+		 close="titlewindow1_closeHandler(event)"
+		 keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			import mx.controls.Alert;
+			
+			private function init():void {
+				this.setFocus();
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:Label x="22" y="29" text="Export System Backlog" fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="61" width="250"/>
+	<s:Label x="26" y="234" text="Choose Save Location:"/>
+	<s:TextInput x="151" y="228" width="257"/>
+	<s:Button x="416" y="228" label="Browse..." click="Alert.show('To be implemented...');"/>
+	<s:Panel x="117" y="96" width="293" height="93" title="Description">
+		<s:Label x="15" y="10" text="This will export a report of the entire project backlog, including all project activity and modifications, to a text file named &quot;backlog.txt&quot;." width="266" height="55" verticalAlign="top" textAlign="center"/>
+	</s:Panel>
+	<s:Button x="425" y="294" label="Export" width="74" height="25" click="Alert.show('To be implemented...');"/>
+	<s:Button x="337" y="294" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+
+</s:TitleWindow>

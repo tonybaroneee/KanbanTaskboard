@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://blog.flexexamples.com/2010/04/09/adding-a-delete-button-in-the-hovered-state-of-a-spark-list-control-item-renderer-in-flex-4/ -->
+<s:ItemRenderer name="CustomItemRen"
+				xmlns:fx="http://ns.adobe.com/mxml/2009" 
+				xmlns:s="library://ns.adobe.com/flex/spark" 
+				xmlns:mx="library://ns.adobe.com/flex/mx" 
+				autoDrawBackground="true"
+				minHeight="24">
+	<s:states>
+		<s:State name="normal" />
+		<s:State name="hovered" />
+		<s:State name="selected" />
+	</s:states>
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			
+			import spark.components.List;
+			
+			protected function button1_clickHandler(evt:MouseEvent):void {
+				Alert.show(data.toString(),
+					"Are you sure you want to remove this e-mail address?",
+					Alert.YES|Alert.CANCEL,
+					null,
+					alrt_closeHandler);
+			}
+			
+			protected function alrt_closeHandler(evt:CloseEvent):void {
+				var lst:List = owner as List;
+				switch (evt.detail) {
+					case Alert.YES:
+					case Alert.OK:
+						var idx:int = lst.dataProvider.getItemIndex(data);
+						lst.dataProvider.removeItemAt(idx);
+						break;
+					case Alert.CANCEL:
+					case Alert.NO:
+						lst.selectedIndex = -1;
+						break;
+					default:
+						break;
+				}
+			}
+		]]>
+	</fx:Script>
+	
+	<s:HGroup width="100%" height="100%"
+			  verticalAlign="middle"
+			  paddingLeft="2" paddingRight="2"
+			  paddingTop="2" paddingBottom="2">
+		<s:Label id="lbl" text="{data}" width="100%" />
+		<s:Button id="btn"
+				  accentColor="red" emphasized="true"
+				  includeIn="hovered, selected"
+				  width="12" height="12"
+				  mouseDown="button1_clickHandler(event);" />
+	</s:HGroup>
+	
+</s:ItemRenderer>

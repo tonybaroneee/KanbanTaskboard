@@ -1,0 +1,16 @@
+18/11/10 02:40:56 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044350518-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+18/11/10 02:41:17 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+18/11/10 02:41:17 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+18/11/10 02:41:17 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 5 retries
+18/11/10 02:45:38 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044633498-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+18/11/10 02:45:59 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+18/11/10 02:45:59 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+18/11/10 02:45:59 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 5 retries
+18/11/10 08:41:17 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044350518-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+18/11/10 08:41:38 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+18/11/10 08:41:38 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+18/11/10 08:41:38 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 6 retries
+18/11/10 08:45:59 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044633498-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+18/11/10 08:46:20 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+18/11/10 08:46:20 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+18/11/10 08:46:20 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 6 retries

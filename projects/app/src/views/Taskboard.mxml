@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="100%" xmlns:views="views.*">
+		
+	<fx:Script>
+		<![CDATA[
+			import events.ProjectEvent;
+			import events.TaskEvent;
+			import events.UserEvent;
+			
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.controls.Spacer;
+			import mx.events.MenuEvent;
+			
+			import valueObjects.Project;
+			import valueObjects.Stage;
+			import valueObjects.TaskData;
+			import valueObjects.Workspace;
+			
+			import views.Column;
+			
+			public var workspace:valueObjects.Workspace;
+			public var columns:ArrayCollection = new ArrayCollection();
+			
+			// Column names for the NewTaskForm popup window
+			public var columnNames:ArrayCollection = new ArrayCollection();
+			
+			private const COLUMN_START_X:int = 48.15;
+			private const COLUMN_Y:int = 189.15;
+			
+			public function populate(project:Project):void
+			{
+				
+				var i:int = 0;
+				var column:Column;
+					
+				for(i=0; i<columns.length; i++) {
+					this.removeElement(columns[i]);
+				}
+				
+				columns.removeAll();
+				columnNames.removeAll();
+				
+				// Fill in project information at the top
+				projectName.text = project.name;
+				company.text = project.company;
+				manager.text = project.projectManager;
+				leadDeveloper.text = project.leadDeveloper;
+				version.text = project.version + "";
+				
+				// **** FIX THIS BELOW ****
+				
+				startDate.text = project.startDate;
+				endDate.text = project.endDate;
+
+				
+				// Master creation loop
+				for (i=0; i<project.workspace.numColumns; i++) {
+					column = new Column;
+					column.column = project.workspace.stages.getItemAt(i) as valueObjects.Stage;
+					column.id = i + "";
+					column.x = COLUMN_START_X + (344*i);
+					column.y = COLUMN_Y;
+					switch (i) {
+						case 0:
+							column.title = (project.workspace.stages.getItemAt(0) as valueObjects.Stage).name;
+							break;
+						case 1:
+							column.title = (project.workspace.stages.getItemAt(1) as valueObjects.Stage).name;
+							break;
+						case 2:
+							column.title = (project.workspace.stages.getItemAt(2) as valueObjects.Stage).name;
+							break;
+						case 3:
+							column.title = (project.workspace.stages.getItemAt(3) as valueObjects.Stage).name;
+							break;
+						case 4:
+							column.title = (project.workspace.stages.getItemAt(4) as valueObjects.Stage).name;
+							break;
+						case 5:
+							column.title = (project.workspace.stages.getItemAt(5) as valueObjects.Stage).name;
+							break;
+						case 6:
+							column.title = (project.workspace.stages.getItemAt(6) as valueObjects.Stage).name;
+							break;
+					}
+					columnNames.addItem(column.title);
+					columns.addItem(column);
+					this.addElement(column);
+					
+					//Load up the tasks
+					for(var j:int = 0; j<column.column.tasks.length; j++) {
+						column.addTask(column.column.tasks.getItemAt(j) as valueObjects.Task, project);
+					}
+					
+				}
+				var separator:Spacer = new Spacer;
+				separator.y = 825;
+				this.addElement(separator);
+			}
+
+		]]>
+	</fx:Script>
+	<s:BorderContainer x="387" y="43" width="634" height="124" cornerRadius="2">
+		<s:Label x="22.2" y="15.15" text="Project Name:" fontSize="14" fontWeight="normal" fontStyle="normal" id="projectNameLabel"/>
+		<s:Label x="423.9" y="32.15" text="Start Date:" fontSize="14" fontWeight="normal" fontStyle="normal" id="startDateLabel"/>
+		<s:Label x="370.95" y="57.15" text="Projected End Date:" fontSize="14" fontWeight="normal" fontStyle="normal" id="endDateLabel"/>
+		<s:Label x="22.2" y="40.15" text="Company:" fontSize="14" fontWeight="normal" fontStyle="normal" id="companyLabel"/>
+		<s:Label x="22.2" y="65.15" text="Project Manager:" fontSize="14" fontWeight="normal" fontStyle="normal" id="managerLabel"/>
+		<s:Label x="22.2" y="90.15" text="Lead Developer:" fontSize="14" fontWeight="normal" fontStyle="normal" id="leadDeveloperLabel"/>
+		<s:Label x="150.2" y="15.65" fontSize="15" color="#040095" id="projectName"/>
+		<s:Label x="150.2" y="40.65" fontSize="15" color="#040095" id="company"/>
+		<s:Label x="150.2" y="65.65" fontSize="15" color="#040095" id="manager"/>
+		<s:Label x="150.2" y="90.65" fontSize="15" color="#040095" id="leadDeveloper"/>
+		<s:Label x="502.9" y="31.65" fontSize="15" color="#040095" id="startDate"/>
+		<s:Label x="503.85" y="56.65" fontSize="15" color="#040095" id="endDate"/>
+		<s:Label x="437.95" y="82.15" text="Version:" fontSize="14" fontWeight="normal" fontStyle="normal" id="versionLabel" width="48"/>
+		<s:Label x="503.85" y="81.65" fontSize="15" color="#040095" id="version"/>
+	</s:BorderContainer>
+	
+</s:Group>

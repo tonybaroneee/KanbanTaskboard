@@ -1,0 +1,275 @@
+20/11/10 11:42:45 INFO  James.Mailet: RemoteAddrNotInNetwork: Authorized addresses: [127.0.0.1/255.255.255.255]
+20/11/10 11:42:45 INFO  James.Mailet: RemoteDelivery: maxRetries is larger than total number of attempts specified. Increasing last delayTime with 19 attempts 
+20/11/10 11:42:45 INFO  James.Mailet: RemoteDelivery: Delay of 21600000 msecs is now attempted: 20 times
+20/11/10 11:42:46 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290218455506-6-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:43:08 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:43:08 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218455506-6-to-test.com: 
+20/11/10 11:43:08 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218455506-6-to-test.com into outgoing after 5 retries
+20/11/10 11:43:08 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290214784547-2-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:43:29 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:43:29 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290214784547-2-to-test.com: 
+20/11/10 11:43:29 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290214784547-2-to-test.com into outgoing after 5 retries
+20/11/10 11:43:29 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290223307716-20-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:43:50 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:43:50 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290223307716-20-to-test.com: 
+20/11/10 11:43:50 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290223307716-20-to-test.com into outgoing after 4 retries
+20/11/10 11:43:50 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225513464-23-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:44:11 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225513464-23-to-test.com: 
+20/11/10 11:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225513464-23-to-test.com into outgoing after 4 retries
+20/11/10 11:44:11 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290213255255-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:44:32 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:44:32 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213255255-0-to-test.com: 
+20/11/10 11:44:32 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213255255-0-to-test.com into outgoing after 5 retries
+20/11/10 11:44:32 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221270668-11-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:44:53 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:44:53 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221270668-11-to-test.com: 
+20/11/10 11:44:53 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221270668-11-to-test.com into outgoing after 5 retries
+20/11/10 11:44:53 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222484146-18-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:45:14 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:45:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222484146-18-to-test.com: 
+20/11/10 11:45:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222484146-18-to-test.com into outgoing after 5 retries
+20/11/10 11:45:14 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290220982834-9-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:45:35 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:45:35 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290220982834-9-to-test.com: 
+20/11/10 11:45:35 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290220982834-9-to-test.com into outgoing after 5 retries
+20/11/10 11:45:35 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290217630056-3-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:45:56 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:45:56 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217630056-3-to-test.com: 
+20/11/10 11:45:56 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217630056-3-to-test.com into outgoing after 5 retries
+20/11/10 11:45:56 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290219282309-8-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:46:17 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:46:17 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219282309-8-to-test.com: 
+20/11/10 11:46:17 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219282309-8-to-test.com into outgoing after 5 retries
+20/11/10 11:46:17 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221347312-12-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:46:38 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:46:38 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221347312-12-to-test.com: 
+20/11/10 11:46:38 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221347312-12-to-test.com into outgoing after 5 retries
+20/11/10 11:46:38 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290229578255-26-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:46:59 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:46:59 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229578255-26-to-test.com: 
+20/11/10 11:46:59 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229578255-26-to-test.com into outgoing after 4 retries
+20/11/10 11:46:59 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290213434183-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:47:20 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:47:20 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213434183-1-to-test.com: 
+20/11/10 11:47:20 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213434183-1-to-test.com into outgoing after 5 retries
+20/11/10 11:47:20 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044633498-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:47:41 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:47:41 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+20/11/10 11:47:41 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 13 retries
+20/11/10 11:47:42 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222290472-17-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:48:03 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:48:03 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222290472-17-to-test.com: 
+20/11/10 11:48:03 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222290472-17-to-test.com into outgoing after 5 retries
+20/11/10 11:48:03 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225315321-22-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:48:24 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:48:24 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225315321-22-to-test.com: 
+20/11/10 11:48:24 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225315321-22-to-test.com into outgoing after 4 retries
+20/11/10 11:48:24 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221800311-14-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:48:45 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:48:45 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221800311-14-to-test.com: 
+20/11/10 11:48:45 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221800311-14-to-test.com into outgoing after 5 retries
+20/11/10 11:48:45 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290229496046-25-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:49:06 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:49:06 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229496046-25-to-test.com: 
+20/11/10 11:49:06 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229496046-25-to-test.com into outgoing after 4 retries
+20/11/10 11:49:06 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222186622-16-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:49:27 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:49:27 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222186622-16-to-test.com: 
+20/11/10 11:49:27 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222186622-16-to-test.com into outgoing after 5 retries
+20/11/10 11:49:27 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290233286459-27-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:49:48 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:49:48 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+20/11/10 11:49:48 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 2 retries
+20/11/10 11:49:48 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222022185-15-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:50:09 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:50:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222022185-15-to-test.com: 
+20/11/10 11:50:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222022185-15-to-test.com into outgoing after 5 retries
+20/11/10 11:50:09 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044350518-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:50:30 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:50:30 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+20/11/10 11:50:30 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 13 retries
+20/11/10 11:50:30 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221056365-10-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:50:51 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:50:51 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221056365-10-to-test.com: 
+20/11/10 11:50:51 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221056365-10-to-test.com into outgoing after 5 retries
+20/11/10 11:50:51 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290219229207-7-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:51:12 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:51:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219229207-7-to-test.com: 
+20/11/10 11:51:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219229207-7-to-test.com into outgoing after 5 retries
+20/11/10 11:51:13 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290226994766-24-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:51:34 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:51:34 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290226994766-24-to-test.com: 
+20/11/10 11:51:34 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290226994766-24-to-test.com into outgoing after 4 retries
+20/11/10 11:51:34 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225061421-21-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:51:55 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:51:55 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225061421-21-to-test.com: 
+20/11/10 11:51:55 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225061421-21-to-test.com into outgoing after 4 retries
+20/11/10 11:51:55 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290218302469-5-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:52:16 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:52:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218302469-5-to-test.com: 
+20/11/10 11:52:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218302469-5-to-test.com into outgoing after 5 retries
+20/11/10 11:52:16 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221656243-13-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:52:37 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:52:37 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221656243-13-to-test.com: 
+20/11/10 11:52:37 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221656243-13-to-test.com into outgoing after 5 retries
+20/11/10 11:52:37 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:52:58 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:52:58 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 11:52:58 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 0 retries
+20/11/10 11:52:58 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222814861-19-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:53:19 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:53:19 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222814861-19-to-test.com: 
+20/11/10 11:53:19 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222814861-19-to-test.com into outgoing after 5 retries
+20/11/10 11:53:19 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290217912742-4-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:53:40 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:53:40 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217912742-4-to-test.com: 
+20/11/10 11:53:40 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217912742-4-to-test.com into outgoing after 5 retries
+20/11/10 11:57:58 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 11:58:19 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 11:58:19 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 11:58:19 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 1 retries
+20/11/10 12:08:19 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 12:08:40 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 12:08:40 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 12:08:40 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 2 retries
+20/11/10 12:34:48 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290233286459-27-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 12:35:09 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 12:35:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+20/11/10 12:35:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 3 retries
+20/11/10 12:53:40 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 12:54:01 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 12:54:01 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 12:54:01 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 3 retries
+20/11/10 14:35:09 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290233286459-27-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:35:30 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:35:30 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+20/11/10 14:35:30 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 4 retries
+20/11/10 14:43:50 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290223307716-20-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290223307716-20-to-test.com: 
+20/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290223307716-20-to-test.com into outgoing after 5 retries
+20/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225513464-23-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:44:32 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:44:32 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225513464-23-to-test.com: 
+20/11/10 14:44:32 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225513464-23-to-test.com into outgoing after 5 retries
+20/11/10 14:46:59 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290229578255-26-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:47:20 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:47:20 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229578255-26-to-test.com: 
+20/11/10 14:47:20 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229578255-26-to-test.com into outgoing after 5 retries
+20/11/10 14:48:24 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225315321-22-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:48:45 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:48:45 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225315321-22-to-test.com: 
+20/11/10 14:48:45 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225315321-22-to-test.com into outgoing after 5 retries
+20/11/10 14:49:06 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290229496046-25-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:49:27 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:49:27 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229496046-25-to-test.com: 
+20/11/10 14:49:27 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229496046-25-to-test.com into outgoing after 5 retries
+20/11/10 14:51:34 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290226994766-24-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:51:55 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:51:55 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290226994766-24-to-test.com: 
+20/11/10 14:51:55 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290226994766-24-to-test.com into outgoing after 5 retries
+20/11/10 14:51:55 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290225061421-21-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:52:16 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:52:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225061421-21-to-test.com: 
+20/11/10 14:52:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225061421-21-to-test.com into outgoing after 5 retries
+20/11/10 14:54:02 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 14:54:23 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 14:54:23 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 14:54:23 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 4 retries
+20/11/10 17:35:30 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290233286459-27-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:35:51 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:35:51 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+20/11/10 17:35:51 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 5 retries
+20/11/10 17:43:08 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290218455506-6-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:43:29 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:43:29 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218455506-6-to-test.com: 
+20/11/10 17:43:29 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218455506-6-to-test.com into outgoing after 6 retries
+20/11/10 17:43:29 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290214784547-2-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:43:50 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:43:50 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290214784547-2-to-test.com: 
+20/11/10 17:43:50 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290214784547-2-to-test.com into outgoing after 6 retries
+20/11/10 17:44:32 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290213255255-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:44:53 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:44:53 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213255255-0-to-test.com: 
+20/11/10 17:44:53 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213255255-0-to-test.com into outgoing after 6 retries
+20/11/10 17:44:53 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221270668-11-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:45:14 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:45:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221270668-11-to-test.com: 
+20/11/10 17:45:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221270668-11-to-test.com into outgoing after 6 retries
+20/11/10 17:45:14 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222484146-18-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:45:35 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:45:35 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222484146-18-to-test.com: 
+20/11/10 17:45:35 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222484146-18-to-test.com into outgoing after 6 retries
+20/11/10 17:45:35 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290220982834-9-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:45:56 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:45:56 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290220982834-9-to-test.com: 
+20/11/10 17:45:56 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290220982834-9-to-test.com into outgoing after 6 retries
+20/11/10 17:45:56 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290217630056-3-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:46:17 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:46:17 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217630056-3-to-test.com: 
+20/11/10 17:46:17 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217630056-3-to-test.com into outgoing after 6 retries
+20/11/10 17:46:17 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290219282309-8-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:46:38 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:46:38 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219282309-8-to-test.com: 
+20/11/10 17:46:38 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219282309-8-to-test.com into outgoing after 6 retries
+20/11/10 17:46:38 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221347312-12-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:46:59 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:46:59 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221347312-12-to-test.com: 
+20/11/10 17:46:59 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221347312-12-to-test.com into outgoing after 6 retries
+20/11/10 17:47:20 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290213434183-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:47:41 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:47:41 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213434183-1-to-test.com: 
+20/11/10 17:47:41 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213434183-1-to-test.com into outgoing after 6 retries
+20/11/10 17:47:42 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044633498-1-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:48:03 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:48:03 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+20/11/10 17:48:03 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 14 retries
+20/11/10 17:48:03 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222290472-17-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:48:24 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:48:24 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222290472-17-to-test.com: 
+20/11/10 17:48:24 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222290472-17-to-test.com into outgoing after 6 retries
+20/11/10 17:48:45 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221800311-14-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:49:06 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:49:06 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221800311-14-to-test.com: 
+20/11/10 17:49:06 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221800311-14-to-test.com into outgoing after 6 retries
+20/11/10 17:49:27 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222186622-16-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:49:48 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:49:48 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222186622-16-to-test.com: 
+20/11/10 17:49:48 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222186622-16-to-test.com into outgoing after 6 retries
+20/11/10 17:50:09 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222022185-15-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:50:30 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:50:30 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222022185-15-to-test.com: 
+20/11/10 17:50:30 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222022185-15-to-test.com into outgoing after 6 retries
+20/11/10 17:50:30 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290044350518-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:50:51 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:50:51 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+20/11/10 17:50:51 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 14 retries
+20/11/10 17:50:51 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221056365-10-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:51:12 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:51:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221056365-10-to-test.com: 
+20/11/10 17:51:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221056365-10-to-test.com into outgoing after 6 retries
+20/11/10 17:51:12 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290219229207-7-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:51:33 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:51:33 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219229207-7-to-test.com: 
+20/11/10 17:51:33 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219229207-7-to-test.com into outgoing after 6 retries
+20/11/10 17:52:16 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290218302469-5-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:52:37 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:52:37 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218302469-5-to-test.com: 
+20/11/10 17:52:37 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218302469-5-to-test.com into outgoing after 6 retries
+20/11/10 17:52:37 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290221656243-13-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:52:58 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:52:58 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221656243-13-to-test.com: 
+20/11/10 17:52:58 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221656243-13-to-test.com into outgoing after 6 retries
+20/11/10 17:53:19 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222814861-19-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:53:40 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:53:40 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222814861-19-to-test.com: 
+20/11/10 17:53:40 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222814861-19-to-test.com into outgoing after 6 retries
+20/11/10 17:53:40 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290217912742-4-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:54:01 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:54:01 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217912742-4-to-test.com: 
+20/11/10 17:54:01 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217912742-4-to-test.com into outgoing after 6 retries
+20/11/10 17:54:23 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+20/11/10 17:54:44 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+20/11/10 17:54:44 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+20/11/10 17:54:44 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 5 retries

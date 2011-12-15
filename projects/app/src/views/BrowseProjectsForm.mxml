@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="455" title="Browsing Projects..."
+		 contentBackgroundColor="#5A8EAF" contentBackgroundAlpha="0.14" 
+		 creationComplete="init();"
+		 horizontalCenter="0" verticalCenter="0" 
+		 xmlns:views="views.*" 
+		 close="titlewindow1_closeHandler(event)"
+		 keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.controls.Alert;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			
+			import spark.events.IndexChangeEvent;
+			
+			[Bindable]
+			private var projects:ArrayCollection = new ArrayCollection;
+			private var selectedIndex:int = -1;
+			
+			private function init():void 
+			{
+				this.setFocus();
+				
+				// TODO: POPULATE PROJECT LIST
+			}
+			
+			protected function openProject():void
+			{
+				
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			protected function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+
+			protected function list1_changeHandler(event:IndexChangeEvent):void
+			{
+				openbutton.enabled = true;
+				selectedIndex = event.newIndex;
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:List id="projectlist" x="45" y="29" height="329" width="308" dataProvider="{projects}" change="list1_changeHandler(event)"></s:List>
+	<s:Button id="openbutton" x="308" y="380" label="Open" height="22" click="openProject()" enabled="false"/>
+	<s:Button id="cancelbutton" x="223" y="380" label="Cancel" height="22" click="titlewindow1_closeHandler(null)"/>
+</s:TitleWindow>

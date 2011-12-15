@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexProperties enableServiceManager="false" flexServerFeatures="4" flexServerType="2" fmlDataModelLocation=".model/InSync.fml" serverContextRoot="/testdrive" serverRoot="C:/Users/Anthony/Desktop/kanban-taskboard/tomcat/webapps/testdrive" serverRootURL="http://localhost:8400/testdrive" toolCompile="true" useServerFlexSDK="false" version="2"/>

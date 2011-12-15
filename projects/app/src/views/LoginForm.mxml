@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" xmlns:services="services.*"
+		 keyUp="group1_keyUpHandler(event)" xmlns:views="views.*" >
+		
+		<fx:Script>
+			<![CDATA[
+				import events.ProjectEvent;
+				import events.UserEvent;
+				
+				import mx.controls.Alert;
+				import mx.events.ValidationResultEvent;
+				import mx.managers.PopUpManager;
+				import mx.rpc.CallResponder;
+				import mx.rpc.events.ResultEvent;
+				
+				import services.KanbanService;
+				
+				import spark.components.BorderContainer;
+				import spark.effects.Resize;
+				
+				import valueObjects.User;
+				
+				private function signIn():void 
+				{
+					if (email.text == '') {
+						Alert.show("Please enter your e-mail address.");
+					} else if (password.text == '') {
+						Alert.show("Please enter your password.");
+					} else {
+						var userAccount:User = new User();
+						userAccount.email = email.text;
+						userAccount.password = password.text;
+						
+//						var test:Resize = new Resize(border);
+//						test.widthTo = 535;
+//						test.heightTo = 334;
+//						test.duration = 800;
+//						currentState = 'toSelect';
+//						test.suspendBackgroundProcessing = true;
+//						test.play([border]);
+						dispatchEvent(new UserEvent(UserEvent.SIGNIN, userAccount));
+					}
+				}
+				
+				private function register():void 
+				{
+					if (nameText.text == '') {
+						Alert.show("Please enter your name.");
+					} else if (email.text == '') {
+						Alert.show("Please enter your e-mail address.");
+					} else if (password.text == '') {
+						Alert.show("Please enter your password.");
+					} else if (passwordConfirmation.text == '') {
+						Alert.show("Please enter the confirmation password.");
+					} else {
+						var verified:Boolean = checkMatchingPassword();
+						if (verified) {
+							var user:User = new User();
+							user.name = nameText.text;
+							user.email = email.text;
+							user.password = password.text;
+							
+							dispatchEvent(new UserEvent(UserEvent.REGISTER, user));
+							
+						} else {
+							password.text = '';
+							passwordConfirmation.text = '';
+							Alert.show("Password and confirmation do not match.");
+						}
+					}
+				}
+				
+				private function checkMatchingPassword():Boolean 
+				{
+					return (password.text == passwordConfirmation.text)
+				}
+				
+				
+				private function DEBUG_gotocreate():void 
+				{
+					dispatchEvent(new ProjectEvent(ProjectEvent.DEBUG_GOTOCREATE));
+				}
+				
+				private function DEBUG_gototaskboard():void 
+				{
+					dispatchEvent(new ProjectEvent(ProjectEvent.DEBUG_GOTOTASKBOARD));
+				}
+
+								
+				public function clearLoginForm():void {
+					//email.errorString = '';
+					message.text = '';
+					email.text = '';
+					password.text = '';
+					if (this.currentState == 'register') {
+						nameText.text = '';
+						passwordConfirmation.text = '';
+					}
+				}
+				
+				protected function emailValidator_valid(evt:ValidationResultEvent):void {
+					//email.errorString = '';
+					message.text = '';
+					if (currentState == 'signin') {
+						if (email.text == '') {
+							Alert.show("Please enter your e-mail address.");
+						} else if (password.text == '') {
+							Alert.show("Please enter your password.");
+						} else {
+							var userAccount:User = new User();
+							userAccount.email = email.text;
+							userAccount.password = password.text;
+							dispatchEvent(new UserEvent(UserEvent.SIGNIN, userAccount));
+						}
+					} else if (currentState == 'register') {
+						if (nameText.text == '') {
+							Alert.show("Please enter your name.");
+						} else if (email.text == '') {
+							Alert.show("Please enter your e-mail address.");
+						} else if (password.text == '') {
+							Alert.show("Please enter your password.");
+						} else if (passwordConfirmation.text == '') {
+							Alert.show("Please enter the confirmation password.");
+						} else {
+							var verified:Boolean = checkMatchingPassword();
+							if (verified) {
+								var user:User = new User();
+								user.name = nameText.text;
+								user.email = email.text;
+								user.password = password.text;
+								
+								dispatchEvent(new UserEvent(UserEvent.REGISTER, user));
+								
+							} else {
+								password.text = '';
+								passwordConfirmation.text = '';
+								Alert.show("Password and confirmation do not match.");
+							}
+						}
+					}
+				}
+				
+				protected function emailValidator_invalid(evt:ValidationResultEvent):void {
+					//email.errorString = evt.message;
+					message.text = evt.message;
+				}
+
+
+				protected function group1_keyUpHandler(event:KeyboardEvent):void
+				{
+					
+					if(event.charCode == 13 && currentState == 'signin') {
+						this.signIn();
+					} else if (event.charCode == 13 && currentState == 'register') {
+						this.register();
+					}
+				}
+
+			]]>
+		</fx:Script>
+	
+		<fx:Metadata>
+		</fx:Metadata>
+		
+		<fx:Declarations>
+			 <mx:EmailValidator id="emailValidator" 
+								valid="emailValidator_valid(event);"
+								invalid="emailValidator_invalid(event);"/>
+		 </fx:Declarations>
+		
+		<s:states>
+			<s:State name="signin"/>
+			<s:State name="register"/>
+			<s:State name="toSelect"/>
+		</s:states>
+		
+		<s:BorderContainer id="border" width="488" height="254" horizontalCenter="0" dropShadowVisible="true" cornerRadius="4" borderColor="#103661" borderWeight="1">
+		<s:Label text="Multiplatform Kanban Taskboard" width="456" height="36" textDecoration="none" chromeColor="#CCCCCC" color="#000000" 
+				 x="16" y="27" fontFamily="Georgia" fontStyle="normal" fontSize="30" includeIn="register,signin"/>
+		<mx:HRule width="359" x="64" y="71" includeIn="register,signin"/>
+	
+		<s:Group id="mainGroup" x="69" y="94" includeIn="register,signin">
+			<s:layout>
+				<s:VerticalLayout/>
+			</s:layout>
+			
+			<mx:Form id="loginForm" width="100%" paddingTop="3" paddingBottom="3">
+				<mx:FormItem label="Name:" includeIn="register" id="nameItem" alpha="0.0">
+					<s:TextInput id="nameText" width="220"/>
+				</mx:FormItem>
+				<mx:FormItem label="Email:" id="emailItem">
+					<s:TextInput id="email" width="220"/>
+				</mx:FormItem>
+				<mx:FormItem label="Password:" id="passwordItem">
+					<s:TextInput id="password" displayAsPassword="true" width="220"/>
+				</mx:FormItem>
+				<mx:FormItem label="Confirm:" includeIn="register" id="confirmItem" alpha="0.0">
+					<s:TextInput id="passwordConfirmation" displayAsPassword="true" width="220"/>				
+				</mx:FormItem>
+			</mx:Form>
+			
+			<s:Group>
+				<s:layout>
+					<s:HorizontalLayout paddingLeft="100"/>
+				</s:layout>
+				<mx:LinkButton id="needToRegButton" label="Need to register?" 
+							   click="clearLoginForm();currentState = 'register';clearLoginForm()" includeIn="signin"/>
+				<mx:LinkButton id="cancelRegButton" label="Cancel"
+							   click="clearLoginForm();currentState = 'signin';clearLoginForm()" 
+							   includeIn="register"/>
+				<s:Button label.signin="Sign in" label.register="Register" id="loginButton" 
+						  enabled="true" click="emailValidator.validate(email.text);"/>
+			</s:Group>
+			
+		</s:Group>
+		<s:Label id="message" verticalAlign="middle" x="162" y="80" color="#FF0000"/>
+		</s:BorderContainer>
+				
+		<s:transitions>
+			<s:Transition toState="register">
+				<s:Sequence>
+					<s:Fade alphaFrom="0.0" alphaTo="1.0" duration="600" 
+							targets="{[nameItem, confirmItem]}"/>
+				</s:Sequence>
+			</s:Transition>
+			
+			<s:Transition toState="signin">	
+				<s:Sequence>
+				</s:Sequence>
+			</s:Transition>
+			
+			<s:Transition toState="toSelect">	
+				<s:Sequence>
+				</s:Sequence>
+			</s:Transition>
+		</s:transitions>
+	
+</s:Group>

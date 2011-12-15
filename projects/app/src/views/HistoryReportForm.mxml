@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="522" height="412"
+		 creationComplete="init();"
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" horizontalCenter="0" verticalCenter="0" 
+		 close="titlewindow1_closeHandler(event)"
+		 keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import mx.events.CloseEvent;
+			import mx.managers.PopUpManager;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			
+			[Bindable]
+			private var currentVersion:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			private var fromVersions:ArrayCollection = new ArrayCollection();
+			[Bindable]
+			private var toVersions:ArrayCollection = new ArrayCollection();
+			
+			private var fromVersionIndex:int = -1;
+			private var toVersionIndex:int = -1;
+			private var projectId:int;
+			
+			private function init():void 
+			{
+				this.setFocus();
+			}
+			
+			public function populate(project:Project):void
+			{
+				currentVersion.addItem(project.version);
+				var index:int = project.version;
+				while (index > 0) {
+					index--;
+					fromVersions.addItemAt(index, 0);
+					toVersions.addItemAt(index, 0);
+				}
+				toVersions.addItem(project.version);
+				projectId = project.id;
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function titleWindow_keyDown(evt:KeyboardEvent):void 
+			{
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+
+			protected function generateReport_clickHandler(event:MouseEvent):void
+			{				
+				//Alert.show('To be implemented...');
+				
+				var req:URLRequest = new URLRequest("http://localhost:8400/testdrive/HistoryReport"); 
+				var vars:URLVariables = new URLVariables();
+				vars.projectId = projectId;
+				req.data = vars; 
+				req.method = URLRequestMethod.POST; 
+				navigateToURL(req, "_blank");
+			}
+
+
+			protected function fromVersionList_changeHandler(event:IndexChangeEvent):void
+			{
+				fromVersionIndex = event.newIndex;
+				if ( (toVersionIndex != -1) && (toVersionIndex > fromVersionIndex) ) {
+					generateReportButton.enabled = true;
+				} else {
+					generateReportButton.enabled = false;
+				}
+			}
+
+
+			protected function toVersionList_changeHandler(event:IndexChangeEvent):void
+			{
+				toVersionIndex = event.newIndex;
+				if ( (fromVersionIndex != -1) && (fromVersionIndex < toVersionIndex) ) {
+					generateReportButton.enabled = true;
+				} else {
+					generateReportButton.enabled = false;
+				}
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:Label x="22" y="29" text="Generate History Report" fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="50" y="61" width="250"/>
+	<s:List id="fromVersionList" dataProvider="{fromVersions}" x="128" y="124" width="71" height="179" color="#000000" fontFamily="Arial" change="fromVersionList_changeHandler(event)"/>
+	<s:List id="currentVersionList" dataProvider="{currentVersion}" x="128" y="83" width="71" height="20" fontFamily="Arial" color="#000000" enabled="false"/>
+	<s:Label x="33" y="124" text="From Version:" fontSize="14"/>
+	<s:List id="toVersionList" dataProvider="{toVersions}" x="351" y="124" width="71" height="179" color="#000000" fontFamily="Arial" change="toVersionList_changeHandler(event)"/>
+	<s:Label x="272" y="124" text="To Version:" fontSize="14"/>
+	<s:Label x="19" y="86" text="Current Version:" fontSize="14"/>
+	<mx:Image x="242" y="186" source="assets/right_arrow.png"/>
+	<s:Button id="generateReportButton" enabled="false" x="385" y="331" label="Generate Report" 
+			  width="104" height="25" click="generateReport_clickHandler(event)"/>
+	<s:Button x="293" y="331" label="Cancel" height="25" click="titlewindow1_closeHandler(null)"/>
+
+</s:TitleWindow>

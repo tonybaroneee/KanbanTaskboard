@@ -1,0 +1,328 @@
+Oct 29, 2010 12:10:22 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 29, 2010 12:10:22 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 12:10:22 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 815 ms
+Oct 29, 2010 12:10:22 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 29, 2010 12:10:22 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 29, 2010 12:10:24 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 12:10:24 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 29, 2010 12:10:24 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/47  config=null
+Oct 29, 2010 12:10:24 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1931 ms
+Oct 29, 2010 12:40:58 AM kanbanbackend.db.UserDaoImpl userAccountCheck
+SEVERE: null
+java.sql.SQLException: no such table: Users
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.PrepStmt.<init>(PrepStmt.java:37)
+	at org.sqlite.Conn.prepareStatement(Conn.java:231)
+	at org.sqlite.Conn.prepareStatement(Conn.java:224)
+	at com.j256.ormlite.jdbc.JdbcDatabaseConnection.compileStatement(JdbcDatabaseConnection.java:72)
+	at com.j256.ormlite.stmt.mapped.MappedPreparedStmt.compile(MappedPreparedStmt.java:36)
+	at com.j256.ormlite.stmt.StatementExecutor.buildIterator(StatementExecutor.java:164)
+	at com.j256.ormlite.stmt.StatementExecutor.query(StatementExecutor.java:110)
+	at com.j256.ormlite.dao.BaseDaoImpl.query(BaseDaoImpl.java:174)
+	at kanbanbackend.db.UserDaoImpl.userAccountCheck(UserDaoImpl.java:122)
+	at kanbanbackend.services.KanbanService.signIn(KanbanService.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 11:02:16 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 29, 2010 11:02:16 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 11:02:16 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 1243 ms
+Oct 29, 2010 11:02:16 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 29, 2010 11:02:16 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 29, 2010 11:02:23 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 11:02:23 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 29, 2010 11:02:23 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/63  config=null
+Oct 29, 2010 11:02:23 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 6847 ms
+Oct 29, 2010 11:51:10 AM kanbanbackend.db.UserDaoImpl userAccountCheck
+SEVERE: null
+java.sql.SQLException: no such table: Users
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.PrepStmt.<init>(PrepStmt.java:37)
+	at org.sqlite.Conn.prepareStatement(Conn.java:231)
+	at org.sqlite.Conn.prepareStatement(Conn.java:224)
+	at com.j256.ormlite.jdbc.JdbcDatabaseConnection.compileStatement(JdbcDatabaseConnection.java:72)
+	at com.j256.ormlite.stmt.mapped.MappedPreparedStmt.compile(MappedPreparedStmt.java:36)
+	at com.j256.ormlite.stmt.StatementExecutor.buildIterator(StatementExecutor.java:164)
+	at com.j256.ormlite.stmt.StatementExecutor.query(StatementExecutor.java:110)
+	at com.j256.ormlite.dao.BaseDaoImpl.query(BaseDaoImpl.java:174)
+	at kanbanbackend.db.UserDaoImpl.userAccountCheck(UserDaoImpl.java:122)
+	at kanbanbackend.services.KanbanService.signIn(KanbanService.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 11:52:16 AM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: no such table: sqlite_sequence
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.Stmt.executeQuery(Stmt.java:89)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:377)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 11:52:16 AM kanbanbackend.db.SQLDriver getRowId
+SEVERE: null
+java.sql.SQLException: no such table: sqlite_sequence
+	at org.sqlite.DB.throwex(DB.java:288)
+	at org.sqlite.NativeDB.prepare(Native Method)
+	at org.sqlite.DB.prepare(DB.java:114)
+	at org.sqlite.Stmt.executeQuery(Stmt.java:89)
+	at kanbanbackend.db.SQLDriver.getRowId(SQLDriver.java:377)
+	at kanbanbackend.model.Project.<init>(Project.java:59)
+	at kanbanbackend.services.KanbanService.createNewProject(KanbanService.java:79)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at flex.messaging.services.remoting.adapters.JavaAdapter.invoke(JavaAdapter.java:418)
+	at flex.messaging.services.RemotingService.serviceMessage(RemotingService.java:183)
+	at flex.messaging.MessageBroker.routeMessageToService(MessageBroker.java:1400)
+	at flex.messaging.endpoints.AbstractEndpoint.serviceMessage(AbstractEndpoint.java:1005)
+	at flex.messaging.endpoints.amf.MessageBrokerFilter.invoke(MessageBrokerFilter.java:103)
+	at flex.messaging.endpoints.amf.LegacyFilter.invoke(LegacyFilter.java:158)
+	at flex.messaging.endpoints.amf.SessionFilter.invoke(SessionFilter.java:44)
+	at flex.messaging.endpoints.amf.BatchProcessFilter.invoke(BatchProcessFilter.java:67)
+	at flex.messaging.endpoints.amf.SerializationFilter.invoke(SerializationFilter.java:166)
+	at flex.messaging.endpoints.BaseHTTPEndpoint.service(BaseHTTPEndpoint.java:291)
+	at flex.messaging.MessageBrokerServlet.service(MessageBrokerServlet.java:353)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:803)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:175)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:128)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:102)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:263)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:844)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:584)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:447)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 12:12:08 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 12:12:08 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 12:12:09 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 12:12:09 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 1:28:37 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 29, 2010 1:28:38 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 1:28:38 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3657 ms
+Oct 29, 2010 1:28:39 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 29, 2010 1:28:39 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 29, 2010 1:28:43 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8400
+Oct 29, 2010 1:28:43 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+Oct 29, 2010 1:28:43 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/375  config=null
+Oct 29, 2010 1:28:43 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4961 ms
+Oct 29, 2010 1:31:51 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jre6\bin;.;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Java\jdk1.6.0_21\bin;C:\Program Files\QuickTime\QTSystem\
+Oct 29, 2010 1:31:51 PM org.apache.coyote.http11.Http11Protocol init
+SEVERE: Error initializing endpoint
+java.net.BindException: Address already in use: JVM_Bind:8400
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:501)
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:177)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1059)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:677)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:792)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:518)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:260)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:412)
+Oct 29, 2010 1:31:51 PM org.apache.catalina.startup.Catalina load
+SEVERE: Catalina.start
+LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use: JVM_Bind:8400
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1061)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:677)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:792)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:518)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:260)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:412)
+Oct 29, 2010 1:31:51 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 521 ms
+Oct 29, 2010 1:31:51 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 29, 2010 1:31:51 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.14
+Oct 29, 2010 2:34:20 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 2:34:20 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 2:34:21 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 2:34:21 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 3:05:30 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 3:05:30 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)
+Oct 29, 2010 3:05:30 PM org.apache.jk.common.MsgAjp processHeader
+SEVERE: BAD packet signature 18245
+Oct 29, 2010 3:05:30 PM org.apache.jk.common.ChannelSocket processConnection
+SEVERE: Error, processing connection
+java.lang.IndexOutOfBoundsException
+	at java.io.BufferedInputStream.read(Unknown Source)
+	at org.apache.jk.common.ChannelSocket.read(ChannelSocket.java:620)
+	at org.apache.jk.common.ChannelSocket.receive(ChannelSocket.java:577)
+	at org.apache.jk.common.ChannelSocket.processConnection(ChannelSocket.java:685)
+	at org.apache.jk.common.ChannelSocket$SocketConnection.runIt(ChannelSocket.java:889)
+	at org.apache.tomcat.util.threads.ThreadPool$ControlRunnable.run(ThreadPool.java:690)
+	at java.lang.Thread.run(Unknown Source)

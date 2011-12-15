@@ -1,0 +1,67 @@
+Date: Wed, 10 Nov 2010 14:18:59 -0500 (EST)
+From: postmaster@localhost
+To: admin@localhost
+Message-ID: <1397168.1.1289416739801.JavaMail.Anthony@UltimaWeapon>
+In-Reply-To: <22885256.01289416738666.JavaMail.admin@localhost>
+Subject: Re:Kanban Taskboard - User Registration
+MIME-Version: 1.0
+Content-Type: multipart/report; 
+	boundary="----=_Part_0_1812813.1289416739704"; 
+	report-type=delivery-status
+
+------=_Part_0_1812813.1289416739704
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi. This is the James mail server at UltimaWeapon.
+I'm afraid I wasn't able to deliver your message to the following addresses.
+This is a permanent error; I've given up. Sorry it didn't work out.  Below
+I include the list of recipients and the reason why I was unable to deliver
+your message.
+
+Failed recipient(s):
+acb1485@rit.edu
+
+Error message:
+504 <admin@localhost>: Sender address rejected: need fully-qualified address
+
+
+------=_Part_0_1812813.1289416739704
+Content-Type: message/delivery-status; name=status.dat
+Content-Transfer-Encoding: 7bit
+Content-Description: Delivery Status Notification
+Content-Disposition: attachment; filename=status.dat
+
+Reporting-MTA: dns; UltimaWeapon
+Received-From-MTA: dns; 127.0.0.1
+
+Final-Recipient: rfc822; acb1485@rit.edu
+Action: failed
+Status: 5.0.0
+Diagnostic-Code: smtp; 504 <admin@localhost>: Sender address rejected: need fully-qualified address
+Last-Attempt-Date: Wed, 10 Nov 2010 14:18:58 -0500 (EST)
+
+------=_Part_0_1812813.1289416739704
+Content-Type: message/rfc822; name="Kanban Taskboard - User Registration"
+Content-Disposition: Attachment; 
+	filename="Kanban Taskboard - User Registration"
+
+Received: from 127.0.0.1 ([127.0.0.1])
+          by UltimaWeapon (JAMES SMTP Server 2.3.2) with SMTP ID 89
+          for <acb1485@rit.edu>;
+          Wed, 10 Nov 2010 14:18:58 -0500 (EST)
+Date: Wed, 10 Nov 2010 14:18:58 -0500 (EST)
+From: admin@localhost
+To: acb1485@rit.edu
+Message-ID: <22885256.01289416738666.JavaMail.admin@localhost>
+Subject: Kanban Taskboard - User Registration
+MIME-Version: 1.0
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hi Anthony!
+
+You have registered - now go sign in!
+
+
+------=_Part_0_1812813.1289416739704--

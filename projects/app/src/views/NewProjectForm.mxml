@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:views="views.*" 
+		 contentBackgroundColor="#2F7DAF" contentBackgroundAlpha="0.14" horizontalCenter="0" xmlns:services="services.*">
+	
+	<fx:Script>
+		<![CDATA[
+			import events.ProjectEvent;
+			import events.UserEvent;
+			
+			import flash.text.engine.FontWeight;
+			
+			import mx.controls.Alert;
+			import mx.controls.Text;
+			import mx.events.ColorPickerEvent;
+			import mx.rpc.events.ResultEvent;
+			import mx.states.State;
+			import mx.events.CloseEvent;
+			import mx.events.ValidationResultEvent;
+			
+			import renderers.CustomItemRenderer;
+			
+			import services.KanbanService;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			import valueObjects.ProjectData;
+			
+			[Bindable]
+			private var userEmailList:ArrayCollection = new ArrayCollection();
+			
+			private var exampleFontSizeDefault:int = 12;
+
+			private function previousStateCheck(): void {
+				switch (currentState) {
+					case 'addColumn6':
+						c7input.text = "";
+						currentState = 'addColumn5';
+						break;
+					case 'addColumn5':
+						c6input.text = "";
+						currentState = 'addColumn4';
+						break;
+					case 'addColumn4':
+						c5input.text = "";
+						currentState = 'addColumn3';
+						break;
+					case 'addColumn3':
+						c4input.text = "";
+						currentState = 'addColumn2';
+						break;
+					case 'addColumn2':
+						c3input.text = "";
+						currentState = 'addColumn1';
+				}
+			}
+			
+			public function clearAllFields(): void {
+				
+				// reset
+				projectNameInput.text = "";
+				companyInput.text = "";
+				managerInput.text = "";
+				developerInput.text = "";
+				startDateInput.text = "";
+				endDateInput.text = "";
+				
+				// reset post-it note options and sample label
+				fontdropdown.selectedIndex = 0;
+				styledropdown.selectedIndex = 0;
+				fontSizeStepper.value = 12;
+				fontcolorpicker.selectedIndex = 0;
+				sampleTaskLabel.setStyle('fontFamily', 'Arial');
+				sampleTaskLabel.setStyle('fontStyle', 'normal');
+				sampleTaskLabel.setStyle('fontWeight', 'normal');
+				sampleTaskLabel.setStyle('fontSize', exampleFontSizeDefault);
+				sampleTaskLabel.setStyle('color', 0);
+				
+				// reset column names
+				switch (this.currentState) {
+					case 'addColumn6':
+						c7input.text = '';
+						c6input.text = '';
+						c5input.text = '';
+						c4input.text = '';
+						c3input.text = '';
+						c2input.text = '';
+						c1input.text = '';
+						break;
+					case 'addColumn5':
+						c6input.text = '';
+						c5input.text = '';
+						c4input.text = '';
+						c3input.text = '';
+						c2input.text = '';
+						c1input.text = '';
+						break;
+					case 'addColumn4':
+						c5input.text = '';
+						c4input.text = '';
+						c3input.text = '';
+						c2input.text = '';
+						c1input.text = '';
+						break;
+					case 'addColumn3':
+						c4input.text = '';
+						c3input.text = '';
+						c2input.text = '';
+						c1input.text = '';
+						break;
+					case 'addColumn2':
+						c3input.text = '';
+						c2input.text = '';
+						c1input.text = '';
+						break;
+					case 'addColumn1':
+						c2input.text = '';
+						c1input.text = '';
+				}
+				
+				userEmailInput.errorString = '';
+				message.text = '';
+			}
+			
+			private function cancelcreation(): void 
+			{
+				Alert.show("Are you sure you want to cancel creation?", "",
+					Alert.YES|Alert.NO,
+					null,
+					alrt_closeHandler);
+			}
+			
+			protected function alrt_closeHandler(evt:CloseEvent):void {
+				var lst:List = owner as List;
+				switch (evt.detail) {
+					case Alert.OK:
+					case Alert.YES:
+						clearAllFields();
+						dispatchEvent(new ProjectEvent(ProjectEvent.CANCELCREATION));
+						break;
+					case Alert.NO:
+					case Alert.CANCEL:
+						break;
+					default:
+						break;
+				}
+			}
+			
+			private function submitCreation():void
+			{
+				var project:ProjectData = new ProjectData();
+				var success:Boolean = true;
+				
+				project.name = projectNameInput.text;
+				project.company = companyInput.text;
+				project.manager = managerInput.text;
+				project.developer = developerInput.text;
+				project.startDate = startDateInput.selectedDate == null ? '' : startDateInput.selectedDate.toDateString();
+				project.endDate = endDateInput.selectedDate == null ? '' : endDateInput.selectedDate.toDateString();
+				project.users = userEmailList.source;
+				
+				switch (fontdropdown.selectedIndex) {
+					case 0:
+						project.postitFont = 'Arial';
+						break;
+					case 1:
+						project.postitFont = 'Times New Roman';
+						break;
+					case 2:
+						project.postitFont = 'Courier New';
+						break;
+					case 3:
+						project.postitFont = 'Georgia';
+						break;
+					case 4:
+						project.postitFont = 'Verdana';
+				}
+				
+				switch (styledropdown.selectedIndex) {
+					case 0:
+						project.postitStyle = 'normal';
+						project.postitWeight = 'normal';
+						break;
+					case 1:
+						project.postitStyle = 'italic';
+						project.postitWeight = 'normal';
+						break;
+					case 2:
+						project.postitStyle = 'normal';
+						project.postitWeight = 'bold';
+						break;
+					case 3:
+						project.postitStyle = 'italic';
+						project.postitWeight = 'bold';
+				}
+				
+				project.postitSize = Number(fontSizeStepper.value);
+				project.postitColor = fontcolorpicker.selectedColor;
+				
+				switch (this.currentState) {
+					case 'addColumn6':
+						if (c7input.text == '' || c6input.text == '' || c5input.text == '' || c4input.text == '' || 
+							c3input.text == '' || c2input.text == '' || c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 7;
+						project.colName7 = c7input.text;
+						project.colName6 = c6input.text;
+						project.colName5 = c5input.text;
+						project.colName4 = c4input.text;
+						project.colName3 = c3input.text;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+						break;
+					case 'addColumn5':
+						if (c6input.text == '' || c5input.text == '' || c4input.text == '' || 
+							c3input.text == '' || c2input.text == '' || c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 6;
+						project.colName6 = c6input.text;
+						project.colName5 = c5input.text;
+						project.colName4 = c4input.text;
+						project.colName3 = c3input.text;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+						break;
+					case 'addColumn4':
+						if (c5input.text == '' || c4input.text == '' || c3input.text == '' || 
+							c2input.text == '' || c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 5;
+						project.colName5 = c5input.text;
+						project.colName4 = c4input.text;
+						project.colName3 = c3input.text;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+						break;
+					case 'addColumn3':
+						if (c4input.text == '' || c3input.text == '' || c2input.text == '' || 
+							c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 4;
+						project.colName4 = c4input.text;
+						project.colName3 = c3input.text;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+						break;
+					case 'addColumn2':
+						if (c3input.text == '' || c2input.text == '' || c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 3;
+						project.colName3 = c3input.text;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+						break;
+					case 'addColumn1':
+						if (c2input.text == '' || c1input.text == '') {
+							success = false;
+						}
+						project.numColumns = 2;
+						project.colName2 = c2input.text;
+						project.colName1 = c1input.text;
+				}
+				
+				if (success) {
+					dispatchEvent(new ProjectEvent(ProjectEvent.SUBMITCREATION, project));
+				} else {
+					Alert.show("One or more stages missing name.");
+				}
+
+			}
+
+			protected function dropdownlist1_changeHandler(event:IndexChangeEvent):void
+			{
+				switch (fontdropdown.selectedIndex) {
+					case 0:
+						sampleTaskLabel.setStyle('fontFamily', 'Arial');
+						break;
+					case 1:
+						sampleTaskLabel.setStyle('fontFamily', 'Times New Roman');
+						break;
+					case 2:
+						sampleTaskLabel.setStyle('fontFamily', 'Courier New');
+						break;
+					case 3:
+						sampleTaskLabel.setStyle('fontFamily', 'Georgia');
+						break;
+					case 4:
+						sampleTaskLabel.setStyle('fontFamily', 'Verdana');
+				}
+			}
+
+
+			protected function styledropdown_changeHandler(event:IndexChangeEvent):void
+			{
+				switch (styledropdown.selectedIndex) {
+					case 0:
+						sampleTaskLabel.setStyle('fontStyle', 'normal');
+						sampleTaskLabel.setStyle('fontWeight', 'normal');
+						break;
+					case 1:
+						sampleTaskLabel.setStyle('fontWeight', 'normal');
+						sampleTaskLabel.setStyle('fontStyle', 'italic');
+						break;
+					case 2:
+						sampleTaskLabel.setStyle('fontStyle', 'normal');
+						sampleTaskLabel.setStyle('fontWeight', 'bold');
+						break;
+					case 3:
+						sampleTaskLabel.setStyle('fontStyle', 'italic');
+						sampleTaskLabel.setStyle('fontWeight', 'bold');
+				}
+			}
+
+
+			protected function numericstepper1_changeHandler(event:Event):void
+			{
+				sampleTaskLabel.setStyle('fontSize', Number(fontSizeStepper.value));
+			}
+
+
+			protected function colorpicker1_changeHandler(event:ColorPickerEvent):void
+			{
+				sampleTaskLabel.setStyle('color', fontcolorpicker.selectedColor);
+			}
+			
+			protected function addNewProjectResult_resultHandler(event:ResultEvent):void
+			{
+				
+				//Alert.show("Cool Man, Cool");
+				
+			}
+
+			protected function addUserButton_clickHandler(event:MouseEvent):void
+			{
+				//TODO: Check database for user!
+				
+				if (userEmailInput.text != '') {
+					userEmailList.addItem(userEmailInput.text);
+					userEmailInput.text = '';
+				} else {
+					Alert.show("The e-mail address must not be blank.");
+				}
+			}
+			
+			protected function emailValidator_valid(evt:ValidationResultEvent):void {
+				//userEmailInput.errorString = "";
+				message.text = "";
+				userEmailList.addItem(userEmailInput.text);
+				userEmailInput.text = '';
+			}
+			
+			protected function emailValidator_invalid(evt:ValidationResultEvent):void {
+				//userEmailInput.errorString = evt.message;
+				message.text = evt.message;
+			}
+
+		]]>
+	</fx:Script>
+	
+	<fx:Declarations>
+		<mx:EmailValidator id="emailValidator" 
+						   valid="emailValidator_valid(event);"
+						   invalid="emailValidator_invalid(event);"/>
+	</fx:Declarations>
+	
+	<s:states>
+		<s:State name="addColumn1"/>  <!-- 2 columns -->
+		<s:State name="addColumn2"/>  <!-- 3 columns -->
+		<s:State name="addColumn3"/>  <!-- 4 columns -->
+		<s:State name="addColumn4"/>  <!-- 5 columns -->
+		<s:State name="addColumn5"/>  <!-- 6 columns -->
+		<s:State name="addColumn6"/>  <!-- 7 columns -->
+	</s:states>
+	
+	<s:Label x="40" y="36" text="Create a New Project...&#xd;&#xd;" width="298" height="36" fontSize="30" fontStyle="italic" 
+			 fontWeight="normal" fontFamily="Times New Roman" textDecoration="none" textAlign="left" verticalAlign="top" chromeColor="#CCCCCC" color="#000000"/>
+	<mx:HRule x="73" y="80" width="261"/>
+	<mx:HRule width="247" x="137" y="356"/>
+	<mx:HRule width="247" x="658" y="321"/>
+	<mx:FormHeading label="General Information" fontSize="14" fontStyle="normal" x="40" y="113"/>
+	<mx:Form width="343" height="240" x="601" y="86">
+		<mx:FormItem label="Stage 1" borderVisible="true" dropShadowVisible="false">
+			<s:TextInput width="200" id="c1input"/>
+		</mx:FormItem>
+		<mx:FormItem label="Stage 2" borderVisible="true" dropShadowVisible="false">
+			<s:TextInput width="200" id="c2input"/>
+		</mx:FormItem>
+		<s:Button id="add1" label="Add Stage" click="currentState = 'addColumn2'" includeIn="addColumn1"/>
+		
+		<mx:FormItem label="Stage 3" borderVisible="true" dropShadowVisible="false" includeIn="addColumn2,addColumn3,addColumn4,addColumn5,addColumn6">
+			<s:TextInput width="200" id="c3input"/>
+		</mx:FormItem>
+		<s:Button id="add2" label="Add Stage" click="currentState = 'addColumn3'" includeIn="addColumn2"/>
+		
+		<mx:FormItem label="Stage 4" borderVisible="true" dropShadowVisible="false" includeIn="addColumn3,addColumn4,addColumn5,addColumn6">
+			<s:TextInput width="200" id="c4input"/>
+		</mx:FormItem>
+		<s:Button id="add3" label="Add Stage" click="currentState = 'addColumn4'" includeIn="addColumn3" />
+		
+		<mx:FormItem label="Stage 5" borderVisible="true" dropShadowVisible="false" includeIn="addColumn4,addColumn5,addColumn6">
+			<s:TextInput width="200" id="c5input"/>
+		</mx:FormItem>
+		<s:Button id="add4" label="Add Stage" click="currentState = 'addColumn5'" includeIn="addColumn4" />
+		
+		<mx:FormItem label="Stage 6" borderVisible="true" dropShadowVisible="false" includeIn="addColumn5,addColumn6">
+			<s:TextInput width="200" id="c6input"/>
+		</mx:FormItem>
+		<s:Button id="add5" label="Add Stage" click="currentState = 'addColumn6'" includeIn="addColumn5" />
+		
+		<mx:FormItem label="Stage 7" borderVisible="true" dropShadowVisible="false" includeIn="addColumn6">
+			<s:TextInput id="c7input" width="200"/>
+		</mx:FormItem>
+	</mx:Form>
+	
+	<s:Button label="Cancel" width="108" height="24" click="cancelcreation()" x="668" y="611"/>
+	<s:Button label="Reset All Fields" width="108" height="24" click="clearAllFields()" x="796" y="611"/>
+	<s:Button label="Finish and Save" width="108" height="24" click="submitCreation()" x="923" y="611"/>
+	<mx:FormHeading label="Post-It Options" fontSize="14" fontStyle="normal" x="40" y="373"/>
+	<mx:Form width="362" height="209" x="74" y="143">
+		<mx:FormItem label="Project Name" horizontalAlign="center">
+			<s:TextInput width="200" x="132" id="projectNameInput"/>
+		</mx:FormItem>
+		<mx:FormItem label="Company">
+			<s:TextInput width="200" id="companyInput"/>
+		</mx:FormItem>
+		<mx:FormItem label="Project Manager">
+			<s:TextInput width="200" id="managerInput"/>
+		</mx:FormItem>
+		<mx:FormItem label="Lead Developer">
+			<s:TextInput width="200" id="developerInput"/>
+		</mx:FormItem>
+		<mx:FormItem label="Start Date">
+			<mx:DateField width="95" id="startDateInput" showToday.addColumn1="true"/>
+		</mx:FormItem>
+		<mx:FormItem label="Projected End Date">
+			<mx:DateField width="95" id="endDateInput"/>
+		</mx:FormItem>
+	</mx:Form>
+	<mx:FormHeading x="567" y="56" label="Project Stages" fontSize="14" fontStyle="normal"/>
+	<mx:FormHeading x="567" y="336" label="Team Members" fontSize="14" fontStyle="normal"/>
+	<mx:VRule x="534" y="86" height="453"/>
+	
+	<s:DropDownList id="styledropdown" x="202" y="437" selectedIndex="0" color="#000000" change="styledropdown_changeHandler(event)" 
+		contentBackgroundAlpha="1.0" contentBackgroundColor="#FFFFFF">
+		
+		<mx:ArrayCollection>
+			<fx:String>Normal</fx:String>
+			<fx:String>Italic</fx:String>
+			<fx:String>Bold</fx:String>
+			<fx:String>Bold Italic</fx:String>
+		</mx:ArrayCollection>
+	</s:DropDownList>
+	
+	<s:DropDownList id="fontdropdown" dropShadowVisible="true" x="56" y="437"
+		selectedIndex="0" fontWeight="normal" color="#000000" width="138" change="dropdownlist1_changeHandler(event)" 
+		contentBackgroundAlpha="1.0" contentBackgroundColor="#FFFFFF">
+		
+		<mx:ArrayCollection>
+			<fx:String>Arial</fx:String>
+			<fx:String>Times New Roman</fx:String>
+			<fx:String>Courier New</fx:String>
+			<fx:String>Georgia</fx:String>
+			<fx:String>Verdana</fx:String>
+		</mx:ArrayCollection>
+		
+	</s:DropDownList>
+	<mx:FormItem label="Font" x="107" y="415">
+	</mx:FormItem>
+	<mx:FormItem label="Style" x="238" y="415">
+	</mx:FormItem>
+	<mx:FormItem label="Size" x="337" y="415">
+	</mx:FormItem>
+	<mx:FormItem label="Font Color" horizontalAlign="left" x="401" y="415">
+	</mx:FormItem>
+	<s:NumericStepper id="fontSizeStepper" value="12" minimum="8" maximum="24" stepSize="2" x="326" y="436" change="numericstepper1_changeHandler(event)" contentBackgroundAlpha="0.0"/>
+	<mx:ColorPicker id="fontcolorpicker" x="414" y="436" change="colorpicker1_changeHandler(event)" contentBackgroundAlpha="1.0"/>
+	<mx:Image source="assets/post-it-larger.png" x="211" y="475"/>
+	<s:Button label="Remove" click="previousStateCheck()" includeIn="addColumn2,addColumn3,addColumn4,addColumn5,addColumn6" x="881" 
+			  y.addColumn2="158" y.addColumn3="186" y.addColumn4="214" y.addColumn5="242" y.addColumn6="270"/>
+	<s:Button id="addUserButton" label="Add" click="emailValidator.validate(userEmailInput.text)" x="931" y="379"/>
+	<s:TextArea selectable="false" id="sampleTaskLabel" paddingLeft="5" paddingTop="5" paddingBottom="25" 
+				paddingRight="5" text="Sample Task Here" borderVisible="false" 
+				contentBackgroundAlpha="0.0" fontFamily="Arial" editable="false" x="211" y="475" width="98" height="103"/>
+	<mx:FormItem label="E-mail Address:" borderVisible="true" dropShadowVisible="false" width="302" x="621" y="379">
+		<s:TextInput width="200" id="userEmailInput"/>
+	</mx:FormItem>
+	<s:List id="userList" width="199" height="112" dataProvider="{userEmailList}" itemRenderer="renderers.CustomItemRenderer" x="724" y="427"></s:List>
+	<mx:Spacer x="1059" y="643" height="19" width="18"/>
+	<mx:Image source="assets/stages.png" x="687" y="50" width="97" height="34"/>
+	<mx:Image source="assets/user-group-icon.png" x="692" y="329"/>
+	<mx:Image source="assets/Edit-Text-icon.png" width="24" height="24" x="192" y="110"/>
+	<mx:Image x="155" y="367" source="assets/Misc-Easel-2-icon.png"/>
+	<s:Label id="message" verticalAlign="middle" x="725" y="407" color="#FF0000"/>
+</s:Group>

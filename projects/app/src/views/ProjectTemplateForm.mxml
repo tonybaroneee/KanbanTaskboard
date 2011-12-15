@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:TitleWindow xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/mx" width="710" height="492"
+			   contentBackgroundColor="#5A8EAF" contentBackgroundAlpha="0.14" 
+			   creationComplete="init();"
+			   horizontalCenter="0" verticalCenter="0" xmlns:views="views.*" 
+			   close="titlewindow1_closeHandler(event)"
+			   keyDown="titleWindow_keyDown(event);">
+	
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.controls.Text;
+			import mx.events.CloseEvent;
+			import mx.events.ColorPickerEvent;
+			import mx.managers.PopUpManager;
+			import mx.states.State;
+			
+			import spark.events.IndexChangeEvent;
+			
+			import valueObjects.Project;
+			import valueObjects.Task;
+			import valueObjects.TaskData;
+			
+			private function init():void 
+			{
+				this.setFocus();
+			}
+			
+			public function populate( /* taskboard:Taskboard, task:valueObjects.Task */ ):void
+			{
+				
+			}
+			
+			private function cancel(): void 
+			{
+				
+			}
+			
+			private function clearForm():void
+			{
+				
+			}
+			
+			private function submitCreation(): void
+			{
+				
+			}
+			
+			protected function titlewindow1_closeHandler(event:CloseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+			
+			private function titleWindow_keyDown(evt:KeyboardEvent):void {
+				if (evt.charCode == Keyboard.ESCAPE) {
+					this.dispatchEvent(new CloseEvent(CloseEvent.CLOSE));
+				}
+			}
+			
+
+			protected function cancelButton_clickHandler(event:MouseEvent):void
+			{
+				PopUpManager.removePopUp(this);
+			}
+
+		]]>
+	</fx:Script>
+	
+	<s:Label x="33" y="29" text="Available Templates" fontSize="24" fontStyle="normal" textDecoration="none" verticalAlign="top" textAlign="left"/>
+	<mx:HRule x="61" y="61" width="190"/>
+	<s:List x="62" y="111" width="171" height="231"></s:List>
+	<s:Button x="86" y="359" label="Create New Template" height="27"/>
+	<s:Button x="498" y="410" label="Cancel" id="cancelButton" height="27" click="cancelButton_clickHandler(event)"/>
+	<s:Button x="589" y="410" label="Use Template" height="27" enabled="false"/>
+	<s:Panel x="287" y="78" width="358" height="301" title="Template Details">
+		<s:Label x="15" y="46" text="Stage #1:"/>
+		<s:Label x="15" y="16" text="Name:"/>
+		<s:Label x="235" y="16" text="# Stages:"/>
+		<s:TextInput id="versionBox" editable="false" x="290" y="11" width="41"/>
+		<s:TextInput id="versionBox0" editable="false" x="64" y="11" width="154"/>
+		<s:TextInput id="authorField" editable="false" x="91" y="41" width="189"/>
+		<s:Label x="15" y="76" text="Stage #2:"/>
+		<s:TextInput id="authorField0" editable="false" x="91" y="71" width="189"/>
+		<s:Label x="15" y="106" text="Stage #3:"/>
+		<s:TextInput id="authorField1" editable="false" x="91" y="101" width="189"/>
+		<s:Label x="15" y="136" text="Stage #4:"/>
+		<s:TextInput id="authorField2" editable="false" x="91" y="131" width="189"/>
+		<s:Label x="15" y="166" text="Stage #5:"/>
+		<s:TextInput id="authorField3" editable="false" x="91" y="161" width="189"/>
+		<s:Label x="15" y="196" text="Stage #6:"/>
+		<s:TextInput id="authorField4" editable="false" x="91" y="191" width="189"/>
+		<s:Label x="15" y="226" text="Stage #7:"/>
+		<s:TextInput id="authorField5" editable="false" x="91" y="221" width="189"/>
+	</s:Panel>
+	<s:Label x="62" y="91" text="Select a template to view:"/>
+	
+</s:TitleWindow>

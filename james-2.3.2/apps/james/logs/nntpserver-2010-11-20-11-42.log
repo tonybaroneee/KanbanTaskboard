@@ -1,0 +1,7 @@
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service uses default thread group.
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service is running on: UltimaWeapon
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service handler hello name is: UltimaWeapon
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service handler connection timeout is: 120000
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service connection backlog is: 5
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service will allow a maximum of 30 connections.
+20/11/10 11:42:45 INFO  nntpserver: NNTP Service started plain:119

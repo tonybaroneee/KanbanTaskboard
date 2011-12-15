@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model xmlns="http://ns.adobe.com/Fiber/1.0">
+  <annotation name="ActionScriptGeneration">
+    <item name="FullyQualifyReferences">true</item>
+  </annotation>
+  <entity name="ProjectData">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">ProjectData</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.data.ProjectData</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">Dummy</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="postitColor" type="integer" required="true"/>
+    <property name="colName4" type="string" required="true"/>
+    <property name="colName3" type="string" required="true"/>
+    <property name="startDate" type="string" required="true"/>
+    <property name="colName6" type="string" required="true"/>
+    <property name="manager" type="string" required="true"/>
+    <property name="postitWeight" type="string" required="true"/>
+    <property name="colName5" type="string" required="true"/>
+    <property name="colName7" type="string" required="true"/>
+    <property name="endDate" type="string" required="true"/>
+    <property name="postitSize" type="integer" required="true"/>
+    <property name="colName2" type="string" required="true"/>
+    <property name="colName1" type="string" required="true"/>
+    <property name="developer" type="string" required="true"/>
+    <property name="name" type="string" required="true"/>
+    <property name="company" type="string" required="true"/>
+    <property name="postitFont" type="string" required="true"/>
+    <property name="numColumns" type="integer" required="true"/>
+    <property name="postitStyle" type="string" required="true"/>
+  </entity>
+  <service name="KanbanService">
+    <annotation name="ActionScriptGeneration">
+      <item name="ServiceType">RemoteObject</item>
+      <item name="Package">services</item>
+      <item name="Destination">kanbanService</item>
+    </annotation>
+    <annotation name="ServiceConfig">
+      <item name="DEFAULT_ENTITY_PACKAGE">valueObjects</item>
+      <item name="contextRoot">/testdrive</item>
+      <item name="rootUrl">http://localhost:8400/testdrive</item>
+      <item name="LINKED_FILE"></item>
+      <item name="ABSOLUTE_ENDPOINT">http://localhost:8400/testdrive/messagebroker/amf</item>
+    </annotation>
+    <annotation name="ServiceTypeGroup">
+      <item name="ServiceBackendType">BlazeDS</item>
+    </annotation>
+    <function name="addTask" arguments="arg0:TaskData,arg1:Project" return-type="Task">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">TaskData,Project</item>
+        <item name="returnType">Task</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">id,stageId,creationDate,desc,priority,ownerId,name,completionDate,completed</item>
+      </annotation>
+    </function>
+    <function name="addNewUser" arguments="arg0:User" return-type="User">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">User</item>
+        <item name="returnType">User</item>
+      </annotation>
+    </function>
+    <function name="signIn" arguments="arg0:string,arg1:string" return-type="User">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">string,string</item>
+        <item name="returnType">User</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">id,email,name,password</item>
+      </annotation>
+    </function>
+    <function name="moveTask" arguments="arg0:Task,arg1:Project,arg2:integer" return-type="boolean">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">Task,Project,integer</item>
+        <item name="returnType">boolean</item>
+      </annotation>
+    </function>
+    <function name="openProject" arguments="arg0:integer" return-type="Project">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">integer</item>
+        <item name="returnType">Project</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">id,startDate,workspace,company,leadDeveloper,name,projectManager,endDate,version</item>
+      </annotation>
+    </function>
+    <function name="createNewProject" arguments="arg0:opaque" return-type="Project">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">ProjectData</item>
+        <item name="returnType">Project</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">id,startDate,workspace,company,leadDeveloper,name,projectManager,endDate,version</item>
+      </annotation>
+    </function>
+    <function name="userExists" arguments="arg0:User" return-type="boolean">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">User</item>
+        <item name="returnType">boolean</item>
+      </annotation>
+    </function>
+    <function name="deleteTask" arguments="arg0:integer,arg1:Project" return-type="boolean">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">integer,Project</item>
+        <item name="returnType">boolean</item>
+      </annotation>
+    </function>
+    <function name="getProjectsForUser" arguments="arg0:User" return-type="opaque">
+      <annotation name="original signature">
+        <item name="inputParams">User</item>
+        <item name="returnType">opaque</item>
+      </annotation>
+      <annotation name="analyze group">
+        <item name="analyzed">false</item>
+      </annotation>
+    </function>
+    <function name="editTask" arguments="arg0:integer,arg1:TaskData,arg2:Project" return-type="Task">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">integer,TaskData,Project</item>
+        <item name="returnType">Task</item>
+      </annotation>
+      <annotation name="ValidProperties">
+        <item name="propertySpecifier">id,stageId,creationDate,desc,priority,ownerId,name,completionDate,completed</item>
+      </annotation>
+    </function>
+    <function name="saveProject" arguments="arg0:integer" return-type="Project">
+      <annotation name="analyze group">
+        <item name="analyzed">true</item>
+      </annotation>
+      <annotation name="original signature">
+        <item name="inputParams">integer</item>
+        <item name="returnType">Project</item>
+      </annotation>
+    </function>
+  </service>
+  <entity name="User">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">User</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.model.User</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">KanbanService</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <annotation name="signIn">
+      <item name="propertySpecifier">id,email,name,password</item>
+    </annotation>
+    <property name="id" type="integer"/>
+    <property name="email" type="string"/>
+    <property name="name" type="string"/>
+    <property name="password" type="string"/>
+  </entity>
+  <entity name="TaskData">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">TaskData</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.data.TaskData</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">Dummy,KanbanService</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="stageId" type="integer" required="true"/>
+    <property name="positStyle" type="string" required="true"/>
+    <property name="postitWeight" type="string" required="true"/>
+    <property name="description" type="string" required="true"/>
+    <property name="postitFont" type="string" required="true"/>
+    <property name="userId" type="integer" required="true"/>
+    <property name="columnIndex" type="integer" required="true"/>
+    <property name="postitSize" type="integer" required="true"/>
+    <property name="positColor" type="integer" required="true"/>
+  </entity>
+  <entity name="Task">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Task</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.model.Task</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">KanbanService,Dummy</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <annotation name="addTask">
+      <item name="propertySpecifier">id,stageId,creationDate,desc,priority,ownerId,name,completionDate,completed</item>
+    </annotation>
+    <annotation name="editTask">
+      <item name="propertySpecifier">id,stageId,creationDate,desc,priority,ownerId,name,completionDate,completed</item>
+    </annotation>
+    <property name="id" type="integer" required="true"/>
+    <property name="stageId" type="integer" required="true"/>
+    <property name="creationDate" type="date" required="true"/>
+    <property name="desc" type="string" required="true"/>
+    <property name="priority" type="integer" required="true"/>
+    <property name="ownerId" type="integer" required="true"/>
+    <property name="name" type="string" required="true"/>
+    <property name="completionDate" type="date" required="true"/>
+    <property name="completed" type="boolean" required="true"/>
+  </entity>
+  <entity name="Workspace">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Workspace</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.model.Workspace</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">KanbanService,Dummy</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="id" type="integer" required="true"/>
+    <property name="postitColor" type="integer" required="true"/>
+    <property name="projectID" type="integer" required="true"/>
+    <property name="postitWeight" type="string" required="true"/>
+    <property name="name" type="string" required="true"/>
+    <property name="postitFont" type="string" required="true"/>
+    <property name="versionId" type="integer" required="true"/>
+    <property name="numColumns" type="integer" required="true"/>
+    <property name="postitStyle" type="string" required="true"/>
+    <property name="stages" type="Stage[]" required="true"/>
+    <property name="postitSize" type="integer" required="true"/>
+  </entity>
+  <entity name="Project">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Project</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.model.Project</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">KanbanService,Dummy</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <annotation name="openProject">
+      <item name="propertySpecifier">id,startDate,workspace,company,leadDeveloper,name,projectManager,endDate,version</item>
+    </annotation>
+    <annotation name="createNewProject">
+      <item name="propertySpecifier">id,startDate,workspace,company,leadDeveloper,name,projectManager,endDate,version</item>
+    </annotation>
+    <property name="id" type="integer" required="true"/>
+    <property name="startDate" type="date" required="true"/>
+    <property name="workspace" type="Workspace" required="true"/>
+    <property name="company" type="string" required="true"/>
+    <property name="leadDeveloper" type="string" required="true"/>
+    <property name="name" type="string" required="true"/>
+    <property name="projectManager" type="string" required="true"/>
+    <property name="endDate" type="date" required="true"/>
+    <property name="version" type="integer" required="true"/>
+  </entity>
+  <entity name="Stage">
+    <annotation name="EntityProperties">
+      <item name="EntityOriginalName">Stage</item>
+    </annotation>
+    <annotation name="ServerProperties">
+      <item name="RemoteClass">kanbanbackend.model.Stage</item>
+      <item name="IncludeRemoteClass">nonempty</item>
+    </annotation>
+    <annotation name="service Group">
+      <item name="service">KanbanService,Dummy</item>
+    </annotation>
+    <annotation name="ActionScriptGeneration">
+      <item name="Package">valueObjects</item>
+    </annotation>
+    <property name="id" type="integer" required="true"/>
+    <property name="workspaceId" type="integer" required="true"/>
+    <property name="numTasks" type="integer" required="true"/>
+    <property name="orderNumber" type="integer" required="true"/>
+    <property name="name" type="string" required="true"/>
+    <property name="capacity" type="integer" required="true"/>
+    <property name="tasks" type="Task[]" required="true"/>
+  </entity>
+</model>

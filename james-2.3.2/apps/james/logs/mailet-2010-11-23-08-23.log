@@ -1,0 +1,207 @@
+23/11/10 08:23:08 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:08 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218455506-6-to-test.com: 
+23/11/10 08:23:08 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218455506-6-to-test.com into outgoing after 9 retries
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290214784547-2-to-test.com: 
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290214784547-2-to-test.com into outgoing after 9 retries
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290223307716-20-to-test.com: 
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290223307716-20-to-test.com into outgoing after 8 retries
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225513464-23-to-test.com: 
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225513464-23-to-test.com into outgoing after 8 retries
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213255255-0-to-test.com: 
+23/11/10 08:23:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213255255-0-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221270668-11-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221270668-11-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222484146-18-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222484146-18-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290220982834-9-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290220982834-9-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217630056-3-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217630056-3-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219282309-8-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219282309-8-to-test.com into outgoing after 9 retries
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290319614630-1-to-test.com: 
+23/11/10 08:23:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290319614630-1-to-test.com into outgoing after 5 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290317838527-0-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290317838527-0-to-test.com into outgoing after 5 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221347312-12-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221347312-12-to-test.com into outgoing after 9 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229578255-26-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229578255-26-to-test.com into outgoing after 8 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213434183-1-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213434183-1-to-test.com into outgoing after 9 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 17 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222290472-17-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222290472-17-to-test.com into outgoing after 9 retries
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225315321-22-to-test.com: 
+23/11/10 08:23:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225315321-22-to-test.com into outgoing after 8 retries
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290480777757-0-to-test.com: 
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290480777757-0-to-test.com into outgoing after 4 retries
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221800311-14-to-test.com: 
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221800311-14-to-test.com into outgoing after 9 retries
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229496046-25-to-test.com: 
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229496046-25-to-test.com into outgoing after 8 retries
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222186622-16-to-test.com: 
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222186622-16-to-test.com into outgoing after 9 retries
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+23/11/10 08:23:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 8 retries
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222022185-15-to-test.com: 
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222022185-15-to-test.com into outgoing after 9 retries
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 17 retries
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221056365-10-to-test.com: 
+23/11/10 08:23:15 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221056365-10-to-test.com into outgoing after 9 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219229207-7-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219229207-7-to-test.com into outgoing after 9 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290226994766-24-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290226994766-24-to-test.com into outgoing after 8 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225061421-21-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225061421-21-to-test.com into outgoing after 8 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218302469-5-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218302469-5-to-test.com into outgoing after 9 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221656243-13-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221656243-13-to-test.com into outgoing after 9 retries
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+23/11/10 08:23:16 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 8 retries
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222814861-19-to-test.com: 
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222814861-19-to-test.com into outgoing after 9 retries
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217912742-4-to-test.com: 
+23/11/10 08:23:17 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217912742-4-to-test.com into outgoing after 9 retries
+23/11/10 14:44:06 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:06 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218455506-6-to-test.com: 
+23/11/10 14:44:06 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218455506-6-to-test.com into outgoing after 10 retries
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290214784547-2-to-test.com: 
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290214784547-2-to-test.com into outgoing after 10 retries
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290223307716-20-to-test.com: 
+23/11/10 14:44:07 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290223307716-20-to-test.com into outgoing after 9 retries
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225513464-23-to-test.com: 
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225513464-23-to-test.com into outgoing after 9 retries
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213255255-0-to-test.com: 
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213255255-0-to-test.com into outgoing after 10 retries
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221270668-11-to-test.com: 
+23/11/10 14:44:08 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221270668-11-to-test.com into outgoing after 10 retries
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222484146-18-to-test.com: 
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222484146-18-to-test.com into outgoing after 10 retries
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290220982834-9-to-test.com: 
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290220982834-9-to-test.com into outgoing after 10 retries
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217630056-3-to-test.com: 
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217630056-3-to-test.com into outgoing after 10 retries
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219282309-8-to-test.com: 
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219282309-8-to-test.com into outgoing after 10 retries
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290319614630-1-to-test.com: 
+23/11/10 14:44:09 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290319614630-1-to-test.com into outgoing after 6 retries
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290317838527-0-to-test.com: 
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290317838527-0-to-test.com into outgoing after 6 retries
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221347312-12-to-test.com: 
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221347312-12-to-test.com into outgoing after 10 retries
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229578255-26-to-test.com: 
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229578255-26-to-test.com into outgoing after 9 retries
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290213434183-1-to-test.com: 
+23/11/10 14:44:10 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290213434183-1-to-test.com into outgoing after 10 retries
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044633498-1-to-test.com: 
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044633498-1-to-test.com into outgoing after 18 retries
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222290472-17-to-test.com: 
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222290472-17-to-test.com into outgoing after 10 retries
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225315321-22-to-test.com: 
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225315321-22-to-test.com into outgoing after 9 retries
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290480777757-0-to-test.com: 
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290480777757-0-to-test.com into outgoing after 5 retries
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221800311-14-to-test.com: 
+23/11/10 14:44:11 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221800311-14-to-test.com into outgoing after 10 retries
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290229496046-25-to-test.com: 
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290229496046-25-to-test.com into outgoing after 9 retries
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222186622-16-to-test.com: 
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222186622-16-to-test.com into outgoing after 10 retries
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290233286459-27-to-test.com: 
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290233286459-27-to-test.com into outgoing after 9 retries
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222022185-15-to-test.com: 
+23/11/10 14:44:12 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222022185-15-to-test.com into outgoing after 10 retries
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290044350518-0-to-test.com: 
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290044350518-0-to-test.com into outgoing after 18 retries
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221056365-10-to-test.com: 
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221056365-10-to-test.com into outgoing after 10 retries
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290219229207-7-to-test.com: 
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290219229207-7-to-test.com into outgoing after 10 retries
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290226994766-24-to-test.com: 
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290226994766-24-to-test.com into outgoing after 9 retries
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290225061421-21-to-test.com: 
+23/11/10 14:44:13 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290225061421-21-to-test.com into outgoing after 9 retries
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290218302469-5-to-test.com: 
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290218302469-5-to-test.com into outgoing after 10 retries
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: No mail server found for: test.com
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290221656243-13-to-test.com: 
+23/11/10 14:44:14 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290221656243-13-to-test.com into outgoing after 10 retries
+23/11/10 14:44:15 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290271416724-0-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+23/11/10 14:44:36 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+23/11/10 14:44:36 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290271416724-0-to-test.com: 
+23/11/10 14:44:36 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290271416724-0-to-test.com into outgoing after 9 retries
+23/11/10 14:44:36 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290222814861-19-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+23/11/10 14:44:57 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+23/11/10 14:44:57 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290222814861-19-to-test.com: 
+23/11/10 14:44:57 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290222814861-19-to-test.com into outgoing after 10 retries
+23/11/10 14:44:57 INFO  James.Mailet: RemoteDelivery: Attempting delivery of Mail1290217912742-4-to-test.com to host test.com at 204.12.0.50 for addresses [test@test.com]
+23/11/10 14:45:18 INFO  James.Mailet: RemoteDelivery: Could not connect to SMTP host: 204.12.0.50, port: 25
+23/11/10 14:45:18 INFO  James.Mailet: RemoteDelivery: Temporary exception delivering mail (Mail1290217912742-4-to-test.com: 
+23/11/10 14:45:18 INFO  James.Mailet: RemoteDelivery: Storing message Mail1290217912742-4-to-test.com into outgoing after 10 retries
